@@ -1,0 +1,190 @@
+/* =======================
+   CẤU HÌNH CHUNG
+======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color:#03111e;
+  color: #eeae18;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Ẩn thanh cuộn */
+html, body {
+    scrollbar-width: none;        
+    -ms-overflow-style: none;     
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;               
+}
+
+
+/* =======================
+  Các bài
+======================= */
+.news-container {
+    max-width: 1400px;
+    padding: 0 40px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    color: #03111e;
+}
+
+.news-item {
+    display: flex;
+    align-items: stretch; /* đảm bảo ảnh kéo dài theo content */
+    gap: 40px;
+}
+
+.news-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Wrapper ảnh cố định chiều rộng, chiều cao tự động */
+.thumb-wrapper {
+    flex: 0 0 260px; /* chiều rộng cố định */
+    display: flex;
+}
+
+/* Ảnh co giãn theo chiều cao content, giữ tỉ lệ */
+.thumb-wrapper img,
+.thumb-gallery {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* không bị méo */
+    border-radius: 10px;
+}
+
+/* Ảnh tĩnh */
+.thumb {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Nội dung bài viết */
+.content {
+    background: #ddd; /* xám nhạt vừa phải, hợp với chữ vàng */
+    border: 1px solid #ccc;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1; /* chiếm hết không gian còn lại */
+    text-align: left !important;
+}
+
+/* Slider ảnh */
+.thumb-gallery {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.thumb-gallery .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.thumb-gallery .slide.active {
+    opacity: 1;
+}
+
+/* Nút chuyển ảnh */
+.thumb-gallery .prev,
+.thumb-gallery .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6px 10px;
+    border: none;
+    background: rgba(0,0,0,0.3);
+    color: #eeae18;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.thumb-gallery .prev { left: 5px; }
+.thumb-gallery .next { right: 5px; }
+
+/* Hover hiệu ứng */
+.thumb-gallery,
+.thumb {
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border 0.35s ease;
+    border: 2px solid transparent;
+}
+
+.thumb-gallery:hover,
+.thumb:hover {
+    transform: scale(1.05);
+    border-color: #eeae18;
+    box-shadow: 0 0 18px rgba(238, 174, 24, 0.7);
+}
+
+/* ==========================
+   RESPONSIVE 
+=========================== */
+@media (max-width: 1200px) {
+    .thumb-wrapper {
+        flex: 0 0 220px;
+    }
+}
+
+@media (max-width: 992px) {
+    .thumb-wrapper {
+        flex: 0 0 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-item,
+    .news-item:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .thumb-wrapper {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-container {
+        padding: 0 15px;
+        gap: 25px;
+    }
+
+    .thumb-wrapper {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        padding: 15px;
+        font-size: 15px;
+    }
+
+    .content h3 {
+        font-size: 18px;
+    }
+}
