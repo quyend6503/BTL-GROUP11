@@ -1,0 +1,143 @@
+{
+    "heo": [
+        { "id": 1, "ten": "Thịt heo quay giòn bì", "gia": "160000", "anh": "../asset/img/thitheoquaygionbi.jpg", "loai": "heo"},
+        { "id": 101, "ten": "Sườn heo nướng mật ong", "gia": "170000", "anh": "../asset/img/suonheonuongmatong.jpg", "loai": "heo" },
+        { "id": 102, "ten": "Thịt kho tàu", "gia": "140000", "anh": "../asset/img/thitheokhotrung.jpg", "loai": "heo" },
+        { "id": 103, "ten": "Ba chỉ heo nướng", "gia": "150000", "anh": "../asset/img/bachiheonuong.jpg", "loai": "heo" },
+        { "id": 104, "ten": "Thịt heo xốt chua ngọt", "gia": "130000", "anh": "../asset/img/thitheosotchuangot.jpg", "loai": "heo" },
+        { "id": 105, "ten": " Thịt heo giả cầy", "gia": "150000", "anh": "../asset/img/heogiacay.jpg", "loai": "heo" },
+        { "id": 106, "ten": "Thịt heo chiên xù", "gia": "150000", "anh": "../asset/img/thitheochienxu.jpg", "loai": "heo" },
+        { "id": 107, "ten": "Sườn xào chua ngọt", "gia": "145000", "anh": "../asset/img/sườn xào chua ngọt.jpg", "loai": "heo" }
+    ],
+
+    "bo": [
+        { "id": 2,   "ten": "Bò nướng lá lốt", "gia": "190000", "anh": "../asset/img/bonuonglalot.jpg", "loai": "bo" },
+        { "id": 201, "ten": "Bò lúc lắc", "gia": "180000", "anh": "../asset/img/boluclac.jpg", "loai": "bo" },
+        { "id": 202, "ten": "Bò xào hành tây", "gia": "170000", "anh": "../asset/img/boxaohanhtay.jpg", "loai": "bo" },
+        { "id": 203, "ten": "Bò kho", "gia": "160000", "anh": "../asset/img/bokho.jpg", "loai": "bo" },
+        { "id": 204, "ten": "Bò hầm tiêu xanh", "gia": "200000", "anh": "../asset/img/bohamtieuxanh.jpg", "loai": "bo" },
+        { "id": 205, "ten": " Lưỡi bò nướng sa tế", "gia": "185000", "anh": "../asset/img/luoibonuongsate.jpg", "loai": "bo" },
+        { "id": 206, "ten": "Bò né", "gia": "175000", "anh": "../asset/img/bone.jpg", "loai": "bo" },
+        { "id": 207, "ten": "Canh kim chi bò", "gia": "160000", "anh": "../asset/img/canhkimchibo.jpg", "loai": "bo" }
+    ],
+
+    "ga": [
+        { "id": 3, "ten": "Gà nướng sa tế", "gia": "180000", "anh": "../asset/img/ganuongsate.jpg", "loai": "ga" },
+        { "id": 301, "ten": "Gà luộc chấm muối tiêu", "gia": "170000", "anh": "../asset/img/galuocchammuoitieu.jpg", "loai": "ga" },
+        { "id": 302, "ten": "Gà rang gừng", "gia": "160000", "anh": "../asset/img/garanggung.jpg", "loai": "ga" },
+        { "id": 303, "ten": "Gà chiên mắm", "gia": "165000", "anh": "../asset/img/gachienmam.jpg", "loai": "ga" },
+        { "id": 304, "ten": "Gà xào xả ớt", "gia": "160000", "anh": "../asset/img/gaxaoxaot.jpg", "loai": "ga" },
+        { "id": 305, "ten": "Gà rán", "gia": "175000", "anh": "../asset/img/garan.jpg", "loai": "ga" },
+        { "id": 306, "ten": "Cà ri gà", "gia": "160000", "anh": "../asset/img/cariga.jpg", "loai": "ga" },
+        { "id": 307, "ten": "Gà trộn", "gia": "150000", "anh": "../asset/img/gatron.jpg", "loai": "ga" }
+    ],
+
+    "tom": [
+        { "id": 4, "ten": "Tôm chiên trứng muối", "gia": "280000", "anh": "../asset/img/tomchientrungmuoi.jpg", "loai": "tom" },
+        { "id": 401, "ten": "Tôm hấp nước dừa", "gia": "260000", "anh": "../asset/img/tomhapnuocdua.jpg", "loai": "tom" },
+        { "id": 402, "ten": "Tôm chiên xù", "gia": "250000", "anh": "../asset/img/tomchienxu.jpg", "loai": "tom" },
+        { "id": 403, "ten": "Tôm sốt me", "gia": "240000", "anh": "../asset/img/tomsotme.jpg", "loai": "tom" },
+        { "id": 404, "ten": "Tôm nướng sa tế", "gia": "270000", "anh": "../asset/img/tomnuongsate.jpg", "loai": "tom" },
+        { "id": 405, "ten": "Gỏi tôm", "gia": "230000", "anh": "../asset/img/goitom.jpg", "loai": "tom" },
+        { "id": 406, "ten": "Tôm rim mắm", "gia": "220000", "anh": "../asset/img/tomrimmam.jpg", "loai": "tom" },
+        { "id": 407, "ten": "Tôm cháy bơ tỏi", "gia": "250000", "anh": "../asset/img/tomchaybotoi.jpg", "loai": "tom" }
+    ],
+
+    "rau": [
+        { "id": 5, "ten": "Cải thìa xào nấm đông cô", "gia": "90000", "anh": "../asset/img/caithiaxaonamdongco.jpg", "loai": "rau" },
+        { "id": 501, "ten": "Rau muống xào tỏi", "gia": "70000", "anh": "../asset/img/raumuongxaotoi.jpg", "loai": "rau" },
+        { "id": 502, "ten": "Bông cải xanh xào", "gia": "80000", "anh": "../asset/img/bongcaixanhxao.jpg", "loai": "rau" },
+        { "id": 503, "ten": "Rau cải luộc", "gia": "60000", "anh": "../asset/img/raucailuoc.jpg", "loai": "rau" },
+        { "id": 504, "ten": "Canh rong biển", "gia": "90000", "anh": "../asset/img/canhrongbien.jpg", "loai": "rau" },
+        { "id": 505, "ten": "Mướp xào tỏi", "gia": "70000", "anh": "../asset/img/muopxaotoi.jpg", "loai": "rau" },
+        { "id": 506, "ten": "Cải cúc xào", "gia": "85000", "anh": "../asset/img/caicucxao.jpg", "loai": "rau" },
+        { "id": 507, "ten": "Đậu cove xào", "gia": "60000", "anh": "../asset/img/daucovexao.jpg", "loai": "rau" }
+    ],
+
+    "nam": [
+        { "id": 6, "ten": "Nấm kim châm", "gia": "90000", "anh": "../asset/img/namkimcham.jpg", "loai": "nam" },
+        { "id": 601, "ten": "Nấm linh chi trắng", "gia": "95000", "anh": "../asset/img/namlinhchitrang.jpg", "loai": "nam" },
+        { "id": 602, "ten": "Nấm tiên", "gia": "85000", "anh": "../asset/img/namtien.jpg", "loai": "nam" },
+        { "id": 603, "ten": "Nấm hải sản", "gia": "90000", "anh": "../asset/img/namhaisan.jpg", "loai": "nam" },
+        { "id": 604, "ten": "Nấm hương", "gia": "120000", "anh": "../asset/img/namhuong.jpg", "loai": "nam" },
+        { "id": 605, "ten": "Nấm đông trùng hạ thảo", "gia": "90000", "anh": "../asset/img/namdongtrunghathao.jpg", "loai": "nam" },
+        { "id": 606, "ten": "Nấm châm trắng", "gia": "95000", "anh": "../asset/img/namchamtrang.jpg", "loai": "nam" }
+    ],
+
+    "nuoc_loc": [
+        { "id": 7, "ten": "Nước lọc Aquafina", "gia": "10000", "anh": "../asset/img/aquafina.jpg", "loai": "nuoc_loc" },
+        { "id": 701, "ten": "Nước suối Lavie", "gia": "10000", "anh": "../asset/img/lavie.jpg", "loai": "nuoc_loc" },
+        { "id": 703, "ten": "Nước lọc Dasani", "gia": "10000", "anh": "../asset/img/dasani.jpg", "loai": "nuoc_loc" },
+         { "id": 704, "ten": "Sparkling Natural Mineral Water", "gia": "85000", "anh": "../asset/img/sparkingwater.jpg", "loai": "nuoc_loc" }
+    ],
+
+    "nuoc_ngot": [
+        { "id": 8, "ten": "Coca Cola", "gia": "20000", "anh": "../asset/img/cocacola.jpg", "loai": "nuoc_ngot" },
+        { "id": 801, "ten": "Pepsi", "gia": "20000", "anh": "../asset/img/pepsi.jpg", "loai": "nuoc_ngot" },
+        { "id": 802, "ten": "7Up", "gia": "20000", "anh": "../asset/img/7up.jpg", "loai": "nuoc_ngot" },
+        { "id": 803, "ten": "Mirinda", "gia": "20000", "anh": "../asset/img/mirinda.jpg", "loai": "nuoc_ngot" },
+        { "id": 804, "ten": "Sprite", "gia": "20000", "anh": "../asset/img/sprite.jpg", "loai": "nuoc_ngot" },
+        { "id": 805, "ten": "Fanta", "gia": "20000", "anh": "../asset/img/fanta.jpg", "loai": "nuoc_ngot" },
+        { "id": 807, "ten": "Sting", "gia": "20000", "anh": "../asset/img/sting.jpg", "loai": "nuoc_ngot" }
+    ],
+
+    "ruou": [
+        { "id": 9, "ten": "Rượu vang đỏ", "gia": "350000", "anh": "../asset/img/ruouvangdo.jpg", "loai": "ruou" },
+        { "id": 901, "ten": "Rượu vang trắng", "gia": "330000", "anh": "../asset/img/ruouvangtrang.jpg", "loai": "ruou" },
+        { "id": 902, "ten": "Rượu sake", "gia": "350000", "anh": "../asset/img/ruousake.jpg", "loai": "ruou" },
+        { "id": 903, "ten": "Rượu soju", "gia": "90000", "anh": "../asset/img/ruousoju.jpg", "loai": "ruou" },
+        { "id": 904, "ten": "Rượu táo mèo", "gia": "200000", "anh": "../asset/img/ruoutaomeo.jpg", "loai": "ruou" },
+        { "id": 905, "ten": "Rượu Whisky", "gia": "500000", "anh": "../asset/img/whisky.jpg", "loai": "ruou" },
+        { "id": 906, "ten": "Chivas 18", "gia": "450000", "anh": "../asset/img/chivas18.jpg", "loai": "ruou" },
+        { "id": 907, "ten": "Chivas 21", "gia": "550000", "anh": "../asset/img/chivas21.jpg", "loai": "ruou" }
+    ],
+
+    "sinh_to": [
+        { "id": 10, "ten": "Sinh tố xoài", "gia": "45000", "anh": "../asset/img/sinhtoxoai.jpg", "loai": "sinh_to" },
+        { "id": 1001, "ten": "Sinh tố bơ", "gia": "45000", "anh": "../asset/img/sinhtobo.jpg", "loai": "sinh_to" },
+        { "id": 1002, "ten": "Sinh tố dâu", "gia": "45000", "anh": "../asset/img/sinhtodau.jpg", "loai": "sinh_to" },
+        { "id": 1003, "ten": "Sinh tố dưa hấu", "gia": "40000", "anh": "../asset/img/sinhtoduahau.jpg", "loai": "sinh_to" },
+        { "id": 1004, "ten": "Sinh tố mãng cầu", "gia": "45000", "anh": "../asset/img/sinhtomangcau.jpg", "loai": "sinh_to" },
+        { "id": 1005, "ten": "Sinh tố sapoche", "gia": "45000", "anh": "../asset/img/sinhtosapoche.jpg", "loai": "sinh_to" },
+        { "id": 1007, "ten": "Sinh tố việt quất", "gia": "50000", "anh": "../asset/img/sinhtovietquat.jpg", "loai": "sinh_to" }
+    ],
+
+    "che": [
+        { "id": 11, "ten": "Chè sương sa hạt lựu", "gia": "45000", "anh": "../asset/img/suongxahatluu.jpg", "loai": "che" },
+        { "id": 12, "ten": "Chè khoai dẻo ngũ sắc", "gia": "45000", "anh": "../asset/img/chekhoaideongusac.jpg", "loai": "che" },
+        { "id": 1101, "ten": "Chè ba màu", "gia": "40000", "anh": "../asset/img/chebamau.jpg", "loai": "che" },
+        { "id": 1102, "ten": "Chè đậu đen", "gia": "35000", "anh": "../asset/img/chedauden.jpg", "loai": "che" },
+        { "id": 1104, "ten": "Chè bưởi", "gia": "45000", "anh": "../asset/img/chebuoi.jpg", "loai": "che" },
+        { "id": 1105, "ten": "Chè thái", "gia": "45000", "anh": "../asset/img/chethai.jpg", "loai": "che" },
+        { "id": 1106, "ten": "Chè khúc bạch", "gia": "45000", "anh": "../asset/img/chekhucbach.jpg", "loai": "che" },
+        { "id": 1107, "ten": "Chè dừa non", "gia": "45000", "anh": "../asset/img/cheduanon.jpg", "loai": "che" }
+    ],
+
+    "kem": [
+        { "id": 13, "ten": "Kem dừa", "gia": "30000", "anh": "../asset/img/kemdua.jpg", "loai": "kem" },
+        { "id": 1301, "ten": "Kem vani", "gia": "30000", "anh": "../asset/img/kemvani.jpg", "loai": "kem" },
+        { "id": 1302, "ten": "Kem socola", "gia": "30000", "anh": "../asset/img/kemsocola.jpg", "loai": "kem" },
+        { "id": 1303, "ten": "Kem dâu", "gia": "30000", "anh": "../asset/img/kemdau.jpg", "loai": "kem" },
+        { "id": 1304, "ten": "Kem matcha", "gia": "35000", "anh": "../asset/img/kematcha.jpg", "loai": "kem" },
+        { "id": 1305, "ten": "Kem xoài", "gia": "30000", "anh": "../asset/img/kemxoai.jpg", "loai": "kem" },
+        { "id": 1307, "ten": "Kem bạc hà", "gia": "30000", "anh": "../asset/img/kembacha.jpg", "loai": "kem" }
+    ],
+
+    "banh_ngot": [
+        { "id": 14, "ten": "Bánh bông lan trứng muối", "gia": "55000", "anh": "../asset/img/bltm.jpg", "loai": "banh_ngot" },
+        { "id": 1401, "ten": "Bánh tiramisu", "gia": "50000", "anh": "../asset/img/tiramisu.jpg", "loai": "banh_ngot" },
+        { "id": 1402, "ten": "Bánh mousse dâu", "gia": "55000", "anh": "../asset/img/mousedau.jpg", "loai": "banh_ngot" },
+        { "id": 1403, "ten": "Bánh flan", "gia": "35000", "anh": "../asset/img/flan.jpg", "loai": "banh_ngot" },
+        { "id": 1404, "ten": "Bánh su kem", "gia": "50000", "anh": "../asset/img/sukem.jpg", "loai": "banh_ngot" },
+        { "id": 1405, "ten": "Bánh red velvet", "gia": "50000", "anh": "../asset/img/redvelved.jpg", "loai": "banh_ngot" },
+        { "id": 1406, "ten": "Bánh cheesecake", "gia": "50000", "anh": "../asset/img/cheesecake.jpg", "loai": "banh_ngot" }
+    ],
+     "khac": [
+        { "id": 15, "ten": "Cơm", "gia": "5000", "anh": "../asset/img/com.jpg", "loai": "khac" },
+        { "id": 1501, "ten": "Kim chi", "gia": "10000", "anh": "../asset/img/kimchi.jpg", "loai": "khac" },
+        { "id": 1502, "ten": "Tóp mỡ", "gia": "65000", "anh": "../asset/img/topmo.jpg", "loai": "khac" },
+        { "id": 1503, "ten": "Đậu rán", "gia": "45000", "anh": "../asset/img/dauran.jpg", "loai": "khac" },
+        { "id": 1504, "ten": "Lạc rang", "gia": "20000", "anh": "../asset/img/lacrang.jpg", "loai": "khac" },
+        { "id": 1505, "ten": "Mỳ tôm", "gia": "3000", "anh": "../asset/img/mytom.jpg", "loai": "khac" }
+     ]
+}

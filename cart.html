@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popup Giỏ Hàng</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="asset/css/cart.css" rel="stylesheet"> 
+</head>
+
+<body>
+
+<button id="openCart" class="btn btn-warning fw-bold m-4 px-4 py-3">
+  Xem Giỏ Hàng
+</button>
+
+<div class="overlay-cart" id="overlayCart"></div>
+
+<div class="cart-panel" id="cartPanel">
+
+  <div class="cart-header d-flex justify-content-between align-items-center">
+    <h1 class="title">Giỏ hàng của bạn</h1>
+    <button class="close-btn" id="closeCart">×</button>
+  </div>
+
+  <div class="cart-body">
+    <!-- ITEM -->
+    <div class="cart-item d-flex border-bottom py-3">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuACSUHSudb5WTtRoyXeaxq_XVdxT77hRJgVHpIie8KnRBm7zsR-eHkBg80O_sTzJqk-tX3m7uRzcF-jAeIUYKqudZEXtqYDBLkyw9Vgb7v2BWNKY-I9d2PmPhOnmJxsBhEwYf-mV38J0Rsr9y8qT-TSr-iF_fG5xOtMkrvoEEfKp3TQFHHfNXUWiSsMvQ0MDrI2zYUONvPcHUTYVpqFuQL7jHdiIoG7Hxk53SfUEB1tguikp0SVRObCdO4aZKasI4HId1TqOctXCNY"
+      class="item-img">
+
+      <div class="item-info text-white flex-grow-1 ms-3">
+        <div class="d-flex justify-content-between fw-semibold">
+          <span>Phở Bò Tái Lăn</span><span>120.000đ</span>
+        </div>
+        <div class="item-sub opacity-75 mt-1">Đơn giá: 120.000đ</div>
+
+        <div class="qty-control d-flex justify-content-between align-items-center mt-3">
+          <div class="qty-buttons d-flex align-items-center gap-2">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" class="qty-input">
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="remove-btn">Xóa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-footer">
+    <div class="d-flex justify-content-between"><span>Tạm tính</span><span>380.000đ</span></div>
+    <div class="d-flex justify-content-between fw-bold fs-5 mt-2"><span>Tổng cộng</span><span>380.000đ</span></div>
+    <button class="checkout-btn">Thanh toán</button>
+    <div class="continue text-center mt-2">
+      hoặc <button class="btn-continue">Tiếp tục mua sắm →</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="asset/js/cart.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
