@@ -1,0 +1,67 @@
+
+<div class="overlay" id="overlay">
+
+    <div class="menu-popup">
+        <button class="close-btn" onclick="closePopup()">✕</button>
+
+        <div class="menu-header">Chi Tiết Món Ăn</div>
+
+        <div class="menu-content">
+            
+            <!-- LEFT -->
+            <div class="left-col">
+                <div class="dish-name">Cải thìa xào nấm đông cô</div>
+
+                <div class="image-wrap">
+                    <img src="images/caithia.jpg" alt="caithia">
+                </div>
+
+                <div class="dish-desc">
+                 Món rau thanh nhã được chế biến từ cải thìa tươi xanh và nấm đông cô hảo hạng. Nấm được ngâm mềm, xào cùng dầu hào và tỏi phi tạo hương thơm nhẹ. Cải thìa chín tới, giữ độ giòn và vị ngọt tự nhiên. Phù hợp cho thực khách ăn chay hoặc muốn cân bằng vị giác giữa các món mặn.
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="menu-info">
+
+                <label>Lựa chọn thêm:</label>
+                <div>
+                    <input type="radio" name="option" value="0" checked> Nguyên bản<br>
+                    <input type="radio" name="option" value="10000"> Thêm nấm (+10k)<br>
+                    <input type="radio" name="option" value="15000"> Thêm rau (+15k)<br>
+                </div>
+
+                <label>Ghi chú:</label>
+                <textarea placeholder="Thêm yêu cầu..."></textarea>
+
+                <label>Thành tiền:
+                    <span id="totalPrice" style="color:white;">90.000đ</span>
+                </label>
+
+                <div class="menu-actions">
+                    <button class="btn-add" onclick="addToCart()">Thêm vào giỏ</button>
+                    <button class="btn-buy">Mua ngay</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="dialogue-popup" id="dialoguePopup">
+        <img src="images/tusena.jpg" class="dialogue-avatar">
+        <div class="dialogue-name">Staff Hiếu</div>
+        <div class="dialogue-text" id="dialogueText"></div>
+        <div class="dialogue-choices" id="dialogueChoices"></div>
+    </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="../jss/dialogue.js"></script>
+<script src="../jss/script.js"></script>
+<script>
+     document.body.dataset.price = 90000;
+    dialogues = dialogueData.mon1;
+</script>
+</body>
+</html>
