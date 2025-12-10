@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi tiết tin tức</title>
+  <link rel="stylesheet" href="chitiettintuc.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div id="header"></div>
+
+  <!-- CHI TIẾT BÀI VIẾT -->
+  <div id="chitiet"></div>
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+  <!-- DATA -->
+  <script src="datatintuc.js"></script>
+
+  <!-- JS XỬ LÝ CHI TIẾT -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const post = newsData.find(item => item.id == id);
+
+    if (post) {
+      document.getElementById("chitiet").innerHTML = `
+        <div class="detail-container">
+          <div class="detail-content">
+            <p class="detail-date">${post.date}</p>
+            <h1 class="detail-title">${post.title}</h1>
+            <img src="${post.image}" class="detail-image">
+
+            <div class="detail-text">
+              ${post.content}
+            </div>
+
+            <!-- PHẦN CHIA SẺ SOCIAL -->
+            <div class="social-links">
+                <span class="share-label">Chia sẻ:</span>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}" 
+                 target="_blank" class="social-btn fb">Facebook</a>
+              <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}" 
+                 target="_blank" class="social-btn tw">Twitter</a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(window.location.href)}" 
+                 target="_blank" class="social-btn ln">LinkedIn</a>
+            </div>
+
+            <a href="Trangtintuc.html" class="back-btn">← Quay lại trang tin</a>
+          </div>
+        </div>
+      `;
+    } else {
+      document.getElementById("chitiet").innerHTML = "<h2>Không tìm thấy bài viết</h2>";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #03111e;
+  color: #eeae18;
+  min-height: 100vh;
+}
+
+.news-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 40px;
+}
+
+.news-title {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+
+/* ✅ 4 BÀI / 1 HÀNG */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* ✅ BOX BÀI VIẾT THEO TONE #08192f */
+.news-card {
+  background: #08192f;
+  border-radius: 14px;
+  border: 1px solid #122d4a;
+  overflow: hidden;
+  transition: 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    0 0 10px rgba(255, 204, 0, 0.3),
+    0 0 25px rgba(255, 204, 0, 0.2);
+}
+
+/* ✅ ẢNH */
+.news-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+/* ✅ NỘI DUNG */
+.news-content {
+  padding: 14px;
+}
+
+.news-content span {
+  font-size: 13px;
+  color: #7fb3ff;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.news-content h3 {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #eeae18;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;   
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 44px; 
+}
+
+
+/* ✅ LINK BAO TOÀN CARD */
+.news-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+
+/* ✅ Tablet */
+@media (max-width: 1024px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ✅ Mobile */
+@media (max-width: 600px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}
