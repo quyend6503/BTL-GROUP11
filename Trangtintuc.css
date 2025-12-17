@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #03111e;
+  background: #111;
   color: #eeae18;
   min-height: 100vh;
 }
@@ -30,9 +30,9 @@ body {
 }
 
 .news-card {
-  background: #08192f;
+  background: #1a1a1a;
   border-radius: 14px;
-  border: 1px solid #122d4a;
+  border: 1px solid rgba(238, 174, 24, 0.25);
   overflow: hidden;
   transition: 0.3s ease;
   cursor: pointer;
