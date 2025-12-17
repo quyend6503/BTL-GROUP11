@@ -10,7 +10,7 @@
 html, body {
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(180deg, #03111e 0%, #02131a 100%);
+  background: #111;
   color: #eeae18;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -117,7 +117,7 @@ button {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.22));
   padding: 22px 40px;
   border-radius: 16px;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(1px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
   text-align: center;
@@ -299,7 +299,7 @@ button {
 .promo-luxury {
   width: 100%;
   padding: 40px 0 30px;
-  background: rgba(3, 17, 30, 0.75);
+  background: #111;
   backdrop-filter: blur(6px);
   border-radius: 16px;
   box-shadow: 0 0 20px rgba(3, 17, 30, 0.6); 
@@ -392,14 +392,18 @@ button {
   background: linear-gradient(135deg, #ff6464, #c90000);
   color: #fff;
 }
-
+.lux-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
 /* =====================================
    CẢM NHẬN KHÁCH HÀNG
 ===================================== */
 .camnhan-khach {
   position: relative;
   height: 420px;
-  background: url("img tin tức/b2t8.jpg") center/cover no-repeat;
+  background: url("img/img\ tin\ tức/b2t8.jpg") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
