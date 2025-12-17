@@ -397,6 +397,10 @@ button {
   text-decoration: none;
   color: inherit;
 }
+.promo-luxury h2 {
+  margin-top: 24px;
+}
+
 /* =====================================
    CẢM NHẬN KHÁCH HÀNG
 ===================================== */
