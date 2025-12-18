@@ -1,10 +1,19 @@
-    // Lấy header
-    document.getElementById("header").innerHTML =
-      doc.getElementById("header").innerHTML;
+  // Hàm load file HTML vào 1 thẻ
+  function loadHTML(id, file) {
+    fetch(file)
+      .then(response => {
+        if (!response.ok) throw new Error('Không tải được file: ' + file);
+        return response.text();
+      })
+      .then(html => {
+        document.getElementById(id).innerHTML = html;
+      })
+      .catch(err => console.error(err));
+  }
 
-    // Lấy footer
-    document.getElementById("footer").innerHTML =
-      doc.getElementById("footer").innerHTML;
+  // Load header và footer
+  loadHTML('header', '../layout/Header.html');
+  loadHTML('footer', '../layout/Footer.html');
 
 // ========== SWITCH IMAGE LOGIC ==========
 const buttons = document.querySelectorAll(".lighting-btn");
@@ -23,8 +32,8 @@ buttons.forEach(btn => {
 
         setTimeout(() => {
             img.src = mode === "day" 
-                ? "https://nhahangsen.vn/wp-content/uploads/2021/08/vip-3.jpg"
-                : "https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img/https://nhahangsen.vn/wp-content/uploads/2021/10/about-sp.png";
+                ? "../AboutUs/ImgAboutUs/ngay3.jpg"
+                : "../AboutUs/ImgAboutUs/toi1.jpg";
 
             img.style.opacity = 1; // Fade in
         }, 300);
