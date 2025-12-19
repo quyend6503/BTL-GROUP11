@@ -6,8 +6,8 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: #111;
-    color: #fff;
+    background: #01101d;
+    color: black;
 }
 
 
@@ -34,7 +34,7 @@ body {
 /* DEAL ITEM */
 .deal-item {
     display: flex;
-    background: #1a1a1a;
+    background: #fff;
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
@@ -59,7 +59,7 @@ body {
 .deal-tag {
     font-size: 20px;
     font-weight: 600;
-    color: #efb022;
+    color: #8b2f2f;
 }
 
 .deal-content h2 {

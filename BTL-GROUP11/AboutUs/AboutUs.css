@@ -23,7 +23,7 @@ body {
     background-size: cover;
     background-position: center;
     height: 1000px;
-    width: 100%px;
+    width: 100%;
 }
 
 .section-title {
@@ -70,7 +70,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
     transition: transform 0.6s ease;
 }
 
@@ -82,6 +81,7 @@ body {
 }
 
 .chef-card img {
+    margin-left: 200px;
     width: 100%;
     height: 600px;
     object-fit: cover;
@@ -99,20 +99,59 @@ body {
     transform: translateY(-50%);
     background: none;
     color: #ffb400;
-    font-size: 40px;
+    font-size: 80px;
     border: none;
     cursor: pointer;
     z-index: 10;
 }
 
 .prev {
-    left: 10px;
+    left: 50px;
 }
 
 .next {
-    right: 10px;
+    right: 50px;
+}
+/* Responsive cho tablet */
+@media (max-width: 1024px) {
+    .chef-card {
+        flex: 0 0 250px;
+    }
+
+    .nut {
+        font-size: 50px;
+    }
 }
 
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+    .chef-card {
+        flex: 0 0 200px;
+    }
+
+    .chef-card img {
+        max-height: 400px;
+    }
+
+    .nut {
+        font-size: 40px;
+    }
+}
+
+/* Responsive cho mobile nhỏ */
+@media (max-width: 480px) {
+    .chef-card {
+        flex: 0 0 150px;
+    }
+
+    .chef-card img {
+        max-height: 300px;
+    }
+
+    .nut {
+        font-size: 30px;
+    }
+}
 /*-------Không gian quán*/
 /* ========== TITLE ========== */
 .section-title {
