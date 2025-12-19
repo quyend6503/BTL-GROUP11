@@ -176,15 +176,12 @@
     padding: 12px;
     font-size: 17px;
     font-weight: 600;
-
     background: #f5b800;
-    color: #000;              /* ⭐ THIẾU */
+    color: #000;            
     border-radius: 8px;
-
-    display: block;           /* ⭐ CỰC KỲ QUAN TRỌNG */
-    text-align: center;       /* ⭐ */
-
-    text-decoration: none;    /* ⭐ bỏ gạch chân */
+    display: block;         
+    text-align: center;      
+    text-decoration: none;   
     cursor: pointer;
 }
 .cartui-continue {
@@ -192,7 +189,6 @@
     text-align: center;
     color: #ccc;
 }
-
 .cartui-continue a {
     color: #f7b733;
     text-decoration: none;
