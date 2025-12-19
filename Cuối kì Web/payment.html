@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@303456789&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="asset/img/logo.jpg">
+    
 <!-- Stylesheets -->
   <link rel="stylesheet" href="asset/css/payment.css">
   <Link rel="stylesheet" href = "asset/css/cart.css">
@@ -115,7 +116,51 @@
   </aside>  
   </div>
 </main>
+<div id="successPopup" class="popup-overlay">
+    <div class="popup-content">
+        <button class="close-btn" onclick="closePopup()">&times;</button>
+        
+        <div class="popup-header">
+            <div class="success-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h2>Thanh toán thành công!</h2>
+            <p>Cảm ơn bạn đã mua hàng tại Gánh Quán</p>
+        </div>
 
+        <div class="bill-details">
+            <div class="bill-row total-row">
+                <span>Tổng thanh toán</span>
+                <span id="bill-total-money" class="highlight-gold">0đ</span>
+            </div>
+            <div class="divider"></div>
+            <div class="bill-row">
+                <span>Mã giao dịch</span>
+                <span id="bill-id">#TRX-0000</span>
+            </div>
+            <div class="bill-row">
+                <span>Khách hàng</span>
+                <span id="bill-name">...</span>
+            </div>
+            <div class="bill-row">
+                <span>Số điện thoại</span>
+                <span id="bill-phone">...</span>
+            </div>
+            <div class="bill-row">
+                <span>Địa chỉ</span>
+                <span id="bill-address" style="text-align:right; max-width: 60%">...</span>
+            </div>
+            <div class="bill-row">
+                <span>Phương thức</span>
+                <span id="bill-method">...</span>
+            </div>
+        </div>
+
+        <div class="popup-actions">
+            <button onclick="finishOrder()" class="btn-confirm">Tiếp tục mua sắm</button>
+        </div>
+    </div>
+</div>
 <script src="asset/js/payment.js"></script>
 </body>
 </html>

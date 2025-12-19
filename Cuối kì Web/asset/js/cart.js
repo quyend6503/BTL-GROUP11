@@ -24,6 +24,11 @@ overlay.onclick = closeCartUI;
 function saveCart() {
     localStorage.setItem("cartUI", JSON.stringify(cartUI));
 }
+function updateCartCount() {
+    const countEl = document.getElementById("cartCount");
+    const totalQty = cartUI.reduce((sum, item) => sum + item.qty, 0);
+    countEl.textContent = totalQty;
+}
 
 function renderCart() {
     itemBox.innerHTML = "";
@@ -58,6 +63,7 @@ function renderCart() {
 
     subtotalEl.textContent = total.toLocaleString() + "đ";
     totalEl.textContent = total.toLocaleString() + "đ";
+    updateCartCount(); 
 }
 
 function changeQty(i, n) {
@@ -102,8 +108,8 @@ window.addToCart = function (name, price, optionName,note, img) {
 };
 
 
-
 renderCart();
+updateCartCount();
 
 const continueBtn = document.getElementById("cartuiContinue");
 
