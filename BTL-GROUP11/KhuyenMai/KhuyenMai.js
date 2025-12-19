@@ -63,7 +63,7 @@ uudai.forEach(promo => {
 });
 
 /*-------------------Mở hộp quà*/
-import { Secret } from '../KhuyenMai/ObjectGanhQuan.js';
+/*import { Secret } from '../KhuyenMai/ObjectGanhQuan.js';
 
 const box = document.getElementById('secret-container');
 
@@ -79,8 +79,9 @@ shuffleArray(Secret).forEach(sec => {
   const div = document.createElement('div');
   div.className = 'secret-box';
   div.innerHTML = `
-        <img src="${sec.image}" alt="${sec.title}" class="box-img">
         <p class="promo-code"></p>
+        <img src="${sec.image}" alt="${sec.title}" class="box-img">
+        
     `;
   box.appendChild(div);
 
@@ -89,12 +90,70 @@ shuffleArray(Secret).forEach(sec => {
 
   img.addEventListener('click', () => {
 
-    document.querySelectorAll('.promo-code').forEach(el => {
-      el.textContent = '';
+    // Ẩn tất cả các hộp khác
+    document.querySelectorAll('.secret-box').forEach(b => {
+        if(b !== div) b.style.display = 'none';
+    });    
+    codeDisplay.innerHTML = `Mã khuyến mại: ${sec.code}<br>${sec.content}`;
+
+        // Hiển thị container nút
+    box.style.display = 'block';
+    copyBtn.textContent = sec.code; // Hiển thị mã trên nút
+  });
+
+  // Copy mã khi click nút
+  copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(sec.code).then(() => {
+      copyBtn.textContent = 'Đã copy!';
+      setTimeout(() => copyBtn.textContent = sec.code, 1500);
+    });
+  });
+});*/
+
+import { Secret } from '../KhuyenMai/ObjectGanhQuan.js';
+
+const box = document.getElementById('secret-container');
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+shuffleArray(Secret).forEach(sec => {
+  const div = document.createElement('div');
+  div.className = 'secret-box';
+  div.innerHTML = `
+        <img src="${sec.image}" alt="${sec.title}" class="box-img">
+        <div class="promo-container" style="display:none;">
+            <button class="copy-btn">Mã khuyến mại</button>
+        </div>
+    `;
+  box.appendChild(div);
+
+  const img = div.querySelector('.box-img');
+  const promoContainer = div.querySelector('.promo-container');
+  const copyBtn = div.querySelector('.copy-btn');
+
+  img.addEventListener('click', () => {
+    // Ẩn tất cả các hộp khác
+    document.querySelectorAll('.secret-box').forEach(b => {
+      if(b !== div) b.style.display = 'none';
     });
 
-    // Hiển thị mã khuyến mại cho hộp này
-    codeDisplay.textContent = `Mã khuyến mại: ${sec.code}${sec.content}`;
+    // Hiển thị container nút
+    promoContainer.style.display = 'block';
+    copyBtn.textContent = sec.code; // Hiển thị mã trên nút
+  });
+
+  // Copy mã khi click nút
+  copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(sec.code).then(() => {
+      copyBtn.textContent = 'NHẬN MÃ THÀNH CÔNG!';
+      setTimeout(() => copyBtn.textContent = sec.code, 1500);
+    });
   });
 });
 

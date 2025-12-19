@@ -67,8 +67,8 @@ const uudai = [
     {
         id: '01',
         title: "ƯU ĐÃI GIỜ CƠM TRƯA",
-        image: "../KhuyenMai/ImgKhuyenMai/noel.jpg",
-        description: '<span class="highlight-deal">Deal Giáng Sinh</span>',
+        image: "../KhuyenMai/ImgKhuyenMai/bun.jpg",
+        description: '',
         content: `
         <ul>
           <li>Đơn tối thiểu 100.000đ</li>
@@ -80,12 +80,11 @@ const uudai = [
     {
         id: '02',
         title: "QUÀ NHỎ THEO ĐƠN",
-        image: "../KhuyenMai/ImgKhuyenMai/che.jpg",
-        description: '<span class="highlight-deal">Deal Giáng Sinh</span>',
+        image: "../KhuyenMai/ImgKhuyenMai/nuoc.jpg",
+        description: '',
         content: `
            <ul>
           <li>Tặng món ăn kèm/ nước</li>
-          <li>Tặng kèm 1 bình trà gừng hoặc nước sâm thảo mộc</li>
           <li>Áp dụng số lượng có hạn mỗi ngày</li>
         </ul>
     `
@@ -93,8 +92,8 @@ const uudai = [
     {
         id: '03',
         title: "ĐẶT CÀNG NHIỀU, DEAL CÀNG LỜI",
-        image: "../KhuyenMai/ImgKhuyenMai/tra.jpg",
-        description: '<span class="highlight-deal">Deal Quà nhỏ</span>',
+        image: "../KhuyenMai/ImgKhuyenMai/giadinh.jpg",
+        description: '',
         content: `
         <ul>
           <li>Hóa đơn <strong>từ 500.000đ</strong></li>
@@ -115,7 +114,7 @@ const Secret = [
     code: "XMAS50",
     description: "",
     content: `
-        <li>Giảm 50% cho đơn hàng trên 500.000đ</li>
+        Giảm 50% cho đơn hàng trên 500.000đ
     `
   },
   {
@@ -125,7 +124,7 @@ const Secret = [
     code: "NOEL20",
     description: "Click để mở hộp và nhận mã!",
     content: `
-        <li>Giảm 20% cho mọi món ăn</li>
+        Giảm 15% cho hóa đơn trên 5 người
     `
   },
   {
@@ -135,7 +134,7 @@ const Secret = [
     code: "NOEL20",
     description: "Click để mở hộp và nhận mã!",
     content: `
-        <li>Giảm 20% cho mọi món ăn</li>
+        Giảm 20% phí ship
     `
   },
     {
@@ -145,7 +144,7 @@ const Secret = [
     code: "NOEL20",
     description: "Click để mở hộp và nhận mã!",
     content: `
-        </br><li>Giảm 20% cho mọi món ăn</li>
+        Giảm 20% cho mọi món ăn
     `
   },  
 ];
