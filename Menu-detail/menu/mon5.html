@@ -1,0 +1,73 @@
+<div class="overlay" id="overlay">
+
+    <div class="menu-popup">
+        <button class="close-btn1" onclick="closePopup()">✕</button>
+
+        <div class="menu-header">Chi Tiết Món Ăn</div>
+
+        <div class="menu-content">
+
+            <!-- LEFT -->
+            <div class="left-col">
+                <div class="dish-name">Cải thìa xào nấm
+                </div>
+
+                <div class="image-slider">
+                    <button class="arrow left" onclick="prevImage()">❮</button>
+
+                    <img id="dishImage" src="../../Menu-detail/images/caithia1.jpeg" alt="Món ăn">
+
+                    <button class="arrow right" onclick="nextImage()">❯</button>
+                </div>
+
+
+                <div class="dish-desc">
+Món rau thanh nhã được chế biến từ cải thìa tươi xanh và nấm đông cô hảo hạng. Nấm được ngâm mềm, xào cùng dầu hào và tỏi phi tạo hương thơm nhẹ. Cải thìa chín tới, giữ độ giòn và vị ngọt tự nhiên. Phù hợp cho thực khách ăn chay hoặc muốn cân bằng vị giác giữa các món mặn.
+                </div>
+            </div>
+            <!-- RIGHT -->
+            <div class="menu-info">
+
+                <label>Lựa chọn thêm:</label>
+                <div>
+                    <input type="radio" name="option" value="0"data-name="Không thêm" checked> Không thêm <br>
+                    <input type="radio" name="option" value="10000"data-name="Thêm nấm (+10k)"> Thêm nấm (+10k)<br>
+                    <input type="radio" name="option" value="15000"data-name="Thêm rau (+15k)"> Thêm rau (+15k)<br>
+                </div>
+
+                <label>Ghi chú:</label>
+                <textarea id="noteInput" placeholder="Thêm yêu cầu..."></textarea>
+
+                <label>Thành tiền:
+                    <span id="totalPrice" style="color:white;">90.000đ</span>
+                </label>
+
+                <div class="menu-actions">
+                    <button class="btn-add1" onclick="addToCart(
+        'Cải thìa xào nấm',
+        currentTotalPrice,
+        currentOptionName,
+        document.getElementById('noteInput')?.value || '',
+        '../../../Menu-detail/images/caithia1.jpeg'
+    )">Thêm vào giỏ</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="dialogue-popup" id="dialoguePopup">
+        <img src="../Menu-detail/images/tusena.jpg" class="dialogue-avatar">
+        <div class="dialogue-name">Staff Hiếu</div>
+        <div class="dialogue-text" id="dialogueText"></div>
+        <div class="dialogue-choices" id="dialogueChoices"></div>
+    </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+</body>
+
+</html>

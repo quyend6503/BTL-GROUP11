@@ -1,0 +1,239 @@
+/***********************
+    OVERLAY
+************************/
+.cartui-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: none;
+    z-index: 9998;
+}
+
+/***********************
+    WRAPPER
+************************/
+.cartui-wrapper {
+    position: fixed;
+    right: -550px;
+    top: 0;
+    width: 500px;
+    height: 100vh;
+    background: #000000de;
+    color: #fff;
+    padding: 22px;
+    z-index: 9999;
+    transition: 0.4s;
+    overflow-y: auto;
+    font-family: sans-serif;
+}
+
+.cartui-wrapper.open {
+    right: 0;
+}
+
+/***********************
+    HEADER
+************************/
+.cartui-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartui-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+}
+
+.cartui-close {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/***********************
+    ITEMS
+************************/
+.cartui-items {
+    margin-top: 20px;
+}
+
+.cartui-item {
+    display: flex;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #123;
+}
+
+.cartui-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cartui-info {
+    flex: 1;
+}
+
+.cartui-info h3 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.cartui-info .cartui-price {
+    margin: 5px 0;
+    color: #ccc;
+}
+.cartui-info .cartui-option {
+    margin: 5px 0;
+    color: #ccc;
+}
+.cartui-info .cartui-note {
+    margin: 5px 0;
+    color: #ccc !important;
+    font-weight: bold;
+}
+.cartui-option {
+    border-left-color: #4caf50 !important; /* xanh cho loại */
+}
+
+.cartui-note {
+    border-left-color: #ff5722; /* cam cho ghi chú */
+}
+
+/***********************
+   QTY CONTROLS
+************************/
+.cartui-qty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+    width: 100px;
+}
+
+.cartui-qty button {
+    width: 26px;
+    height: 26px;
+    border: none;
+    border-radius: 6px;
+    background: #0d223a;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.cartui-qty span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/***********************
+   REMOVE
+************************/
+.cartui-remove {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #ecbf0ae7;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width:100px;
+    transition: 0.3s ease
+}
+.cartui-remove:hover{
+    transform: scale(1.1);
+}
+/***********************
+   SUMMARY
+************************/
+.cartui-summary {
+    margin-top: 25px;
+    border-top: 1px solid #123;
+    padding-top: 20px;
+}
+
+.cartui-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cartui-row.total {
+    font-size: 18px;
+}
+
+.cartui-checkout {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    font-weight: 600;
+    background: #f5b800;
+    color: #000;            
+    border-radius: 8px;
+    display: block;         
+    text-align: center;      
+    text-decoration: none;   
+    cursor: pointer;
+}
+.cartui-continue {
+    margin-top: 15px;
+    text-align: center;
+    color: #ccc;
+}
+.cartui-continue a {
+    color: #f7b733;
+    text-decoration: none;
+}                                                                                                                           
+
+
+
+/* CART ICON */
+.cart-icon {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    background: #f5b800;
+    color: #000;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.25s ease;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+.cart-icon i {
+    font-size: 22px;
+}
+
+/* SỐ LƯỢNG */
+.cart-count {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    min-width: 20px;
+    text-align: center;
+}
