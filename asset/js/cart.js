@@ -38,7 +38,8 @@ function renderCart() {
                 <div class="cartui-info">
                     <h3>${item.name}</h3>
                     <div class="cartui-price">Đơn giá: ${item.price.toLocaleString()}đ</div>
-
+                    <div class="cartui-option">Loại: ${item.option || "Mặc định"}</div>
+                    <div class="cartui-note">Ghi chú: ${item.note || "Không có"}</div>
                     <div class="cartui-qty">
                         <button onclick="changeQty(${i}, -1)">−</button>
                         <span>${item.qty}</span>
@@ -72,16 +73,35 @@ function removeItem(i) {
     renderCart();
 }
 
-window.addToCart = function (name, price, img) {
-    const exist = cartUI.find(x => x.name === name);
+window.addToCart = function (name, price, optionName,note, img) {
+    // đảm bảo price là number
+    const numericPrice = Number(price) || 0;
 
-    if (exist) exist.qty++;
-    else cartUI.push({ name, price, img, qty: 1 });
+    // tạo key duy nhất: tên + option (để phân biệt cùng tên nhưng option khác)
+    const key = name + " | " + (optionName || "")+ " | " +(note || "");
+
+    const exist = cartUI.find(x => x.key === key);
+
+    if (exist) {
+        exist.qty++;
+    } else {
+        cartUI.push({
+            key: key,            // dùng để kiểm tra trùng
+            name: name,          // tên hiển thị
+            option: optionName || "", // lưu option để hiển thị
+            note: note,
+            price: numericPrice, // giá đơn vị (số)
+            img: img,            // ảnh
+            qty: 1
+        });
+    }
 
     saveCart();
     renderCart();
     openCartUI();
 };
+
+
 
 renderCart();
 
@@ -91,3 +111,4 @@ continueBtn.onclick = function (e) {
     e.preventDefault();
     closeCartUI();  // chỉ đóng popup
 };
+
