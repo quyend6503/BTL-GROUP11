@@ -8,7 +8,7 @@ const KhuyenMai = [
         content: `
                 <li>Tặng 2 ly trà nóng mùa Giáng Sinh</li>
                 <li>Ưu đãi còn <strong>299.000đ / 2 người</strong></li>
-                <li><i>Chỉ áp dụng tối <strong>24 & 25/12</strong></i></li>
+                <li>Chỉ áp dụng tối <strong>24 & 25/12</strong></li>
     `
     },
     {
@@ -21,7 +21,7 @@ const KhuyenMai = [
                 <li>Tặng 01 món tráng miệng nhà làm</li>
                 <li>Ưu đãi còn <strong>299.000đ / 2 người</strong></li>
                 <li>Chỉ áp dụng tối <strong>24 & 25/12</strong></li>
-                <i>Áp dụng tại quán - không cộng dồn khuyến mãi khác</i>
+                <li>Áp dụng tại quán - không cộng dồn khuyến mãi khác</li>
     `
     },
     {
@@ -32,7 +32,7 @@ const KhuyenMai = [
         content: `
                 <li>Tặng trà nóng cho mỗi bàn</li>
                 <li>Ăn ngon – chuyện lâu – không vội về</li>
-                <i>Áp dụng từ 17h–21h</i>
+                <li>Áp dụng từ 17h–21h</li>
     `
     },
     {
@@ -44,7 +44,7 @@ const KhuyenMai = [
                 <li>Gà quay lá chanh, sườn nướng mật ong, canh nấm, xôi gấc</li>
                 <li>Tặng kèm 1 bình trà gừng hoặc nước sâm thảo mộc</li>
                 <li>Giá Noel chỉ <strong>599.000đ / 4 người</strong></li>
-                <li><i>Áp dụng từ <strong>20/12 – 25/12</strong>, dùng bữa tại quán</i></li>
+                <li>Áp dụng từ <strong>20/12 – 25/12</strong>, dùng bữa tại quán</li>
     `
     },
     {
@@ -56,7 +56,7 @@ const KhuyenMai = [
                 <li>Gà quay lá chanh, sườn nướng mật ong</li>
                 <li>Tặng kèm 1 bình trà gừng hoặc nước sâm thảo mộc</li>
                 <li>Giá Noel chỉ <strong>599.000đ / 4 người</strong></li>
-                <li><i>Áp dụng từ <strong>20/12 – 25/12</strong>, dùng bữa tại quán</i></li>
+                <li>Áp dụng từ <strong>20/12 – 25/12</strong>, dùng bữa tại quán</li>
     `
     },
 ];
@@ -73,7 +73,7 @@ const uudai = [
         <ul>
           <li>Đơn tối thiểu 100.000đ</li>
           <li>Hỗ trợ <strong>15.000đ</strong> phí vận chuyển cho cơm trưa</li>
-          <li>Áp dụng từ khung giờ <strong> 11:00 – 13:00, Thứ 2 – Thứ 6</strong></li>
+          <li>Áp dụng từ <strong> 11:00 – 13:00, Thứ 2 – Thứ 6</strong></li>
         </ul>
     `
     },
@@ -84,6 +84,7 @@ const uudai = [
         description: '',
         content: `
            <ul>
+           <li>Đơn tối thiểu 100.000đ</li>
           <li>Tặng món ăn kèm/ nước</li>
           <li>Áp dụng số lượng có hạn mỗi ngày</li>
         </ul>
@@ -96,9 +97,8 @@ const uudai = [
         description: '',
         content: `
         <ul>
-          <li>Hóa đơn <strong>từ 500.000đ</strong></li>
+          <li>Đơn tối thiểu 500.000đ</li>
           <li>Giảm trực tiếp <strong>100.000đ</strong></li>
-          <li>Một đơn cho cả nhà</li>
           <li>Áp dụng từ <strong>20/12 – 25/12</strong>, cho cho các đơn giao hàng</li>
         </ul>
     `

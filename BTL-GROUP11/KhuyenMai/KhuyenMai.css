@@ -1,11 +1,8 @@
-* {
-    box-sizing: border-box
-}
 
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: #01101d;
+    background: #111;
     color: black;
 }
 
@@ -41,7 +38,7 @@ DEAL ITEM
 /* Card từng khuyến mại */
 .deal-item {
     display: flex;
-    background: #fff;
+    background: transition;
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -71,17 +68,20 @@ DEAL ITEM
     width: 55%;
     padding: 25px 30px;
     flex-direction: column;
+    color: #efb022;
 }
 
 .deal-content {
     margin: 10px 30px;
     font-size: 22px;
+        color: #efb022;
 }
 
 .deal-content ul {
     margin-bottom: 10px;
     font-size: 15px;
     padding-left: 1cm;
+        color: white;
 }
 
 .deal-content {
