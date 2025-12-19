@@ -38,7 +38,7 @@ DEAL ITEM
 /* Card từng khuyến mại */
 .deal-item {
     display: flex;
-    background: transition;
+    background: #1a1a1a;
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -81,7 +81,7 @@ DEAL ITEM
     margin-bottom: 10px;
     font-size: 15px;
     padding-left: 1cm;
-        color: white;
+    color: white;
 }
 
 .deal-content {
