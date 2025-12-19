@@ -145,7 +145,7 @@ shuffleArray(Secret).forEach(sec => {
 
     // Hiển thị container nút
     promoContainer.style.display = 'block';
-    copyBtn.textContent = sec.code; // Hiển thị mã trên nút
+    copyBtn.innerHTML = sec.code; // Hiển thị mã trên nút
   });
 
   // Copy mã khi click nút
