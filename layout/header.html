@@ -1,9 +1,9 @@
-<header class="header">
+<header class="site-header">
   <div class="header-logo">
     <img src="img/LOGO.png" alt="Gánh Quán" />
   </div>
 
-  <nav class="nav">
+  <nav class="header-nav" id="headerNav">
     <a href="#"><span>Trang chủ</span></a>
     <a href="#"><span>Thực đơn</span></a>
     <a href="#"><span>Khuyến mãi</span></a>
@@ -11,8 +11,8 @@
     <a href="#"><span>Về chúng tôi</span></a>
   </nav>
 
-  <div class="search-area">
-    <input placeholder="Tìm kiếm" />
+  <div class="header-tools">
+    <input type="text" placeholder="Tìm kiếm" />
     <button class="lang-btn">EN</button>
   </div>
 
@@ -21,6 +21,6 @@
 
 <script>
 function toggleMenu() {
-  document.querySelector('.nav').classList.toggle('active');
+  document.getElementById("headerNav").classList.toggle("active");
 }
 </script>
