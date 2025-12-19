@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn bàn - Gánh Quán</title>
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="css/trang2.css">
+<link rel="icon" type="image/jpeg" href="images/logo.jpg">
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- SƠ ĐỒ BÀN -->
+    <div class="left">
+     <br>
+        <h2>Chọn bàn muốn đặt</h2>
+
+        <div class="table-box" id="tableBox" onclick="resetZoom(event)">
+            <img id="floorImg" src="images/sodo1.jpg">
+            <!-- HOTSPOTS giữ nguyên vị trí hiện tại -->
+            <div class="hotspot" style="left: 45.8%; top: 16%" onclick="zoomToSpot(event,this,'Bàn VIP (8-10 người)','images/Banvip.png')"></div>
+             <div class="hotspot" style="right: 19%; top: 20%;" onclick="zoomToSpot(event,this,'Bàn sự kiện (12-20 người)','images/Bansukien.png')"></div>
+             <div class="hotspot" style="right: 18%; top: 44%;" onclick="zoomToSpot(event,this,'Bàn gia đình 1 (6-10 người)','images/Bangiadinh.png')"></div>
+             <div class="hotspot" style="left: 19%; top: 19%;" onclick="zoomToSpot(event,this,'Bàn gia đình 2 (6-10 người)','images/Bangiadinh.png')"></div>
+             <div class="hotspot" style="left: 18%; top: 48%;" onclick="zoomToSpot(event,this,'Bàn gia đình 3 (6-10 người)','images/Bangiadinh.png')"></div>
+             <div class="hotspot" style="right: 35%; top: 20%;" onclick="zoomToSpot(event,this,'Bàn to (6-10 người)','images/Banto.png')"></div>
+            <div class="hotspot" style="right: 43%;top: 69%; " onclick="zoomToSpot(event,this,'Bàn nhỏ (2-4 người)')"></div>
+            <div class="hotspot" style="right: 37.6%;top: 69%; " onclick="zoomToSpot(event,this,'Bàn nhỏ (2-4 người)')"></div>
+            <div class="hotspot" style="right: 32.5%;top: 69%; " onclick="zoomToSpot(event,this,'Bàn nhỏ (2-4 người)')"></div>
+            <div class="hotspot" style="right: 27.5%;top: 69%; " onclick="zoomToSpot(event,this,'Bàn nhỏ (2-4 người)')"></div>
+            <div class="hotspot" style="right: 40.2%;top: 83%; " onclick="zoomToSpot(event,this,'Bàn ngoài trời (4-8 người)')"></div>
+            <div class="hotspot" style="right: 31.2%;top: 83%; " onclick="zoomToSpot(event,this,'Bàn ngoài trời (4-8 người)')"></div>
+            <div class="hotspot" style="left: 16.8%;  top: 79.5%;" onclick="zoomToSpot(event,this,'Bàn ngoài trời 1 (4-6 người)')"></div>
+            <div class="hotspot" style="left: 25.5%;  top: 80.5%;" onclick="zoomToSpot(event,this,'Bàn ngoài trời 2 (4-6 người)')"></div>
+            <div class="hotspot" style="left: 34.4%;  top: 80.8%;" onclick="zoomToSpot(event,this,'Bàn ngoài trời 3 (4-6 người)')"></div>
+
+        </div>
+    </div>
+
+    <!-- BẢNG THÔNG TIN -->
+    <div class="panel">
+        <h2>Chi tiết bàn đặt</h2>
+
+        <div class="group">
+            <div class="label">Số người</div>
+            <div class="box" id="showPeople">--</div>
+        </div>
+
+        <div class="group">
+            <div class="label">Ngày</div>
+            <div class="box" id="showDate">--</div>
+        </div>
+
+        <div class="group">
+            <div class="label">Giờ</div>
+            <div class="box" id="showTime">--</div>
+        </div>
+
+        <div class="group">
+            <div class="label">Bàn đã chọn</div>
+            <div class="box"><span id="selectedTable">Chưa chọn</span> </div>
+        </div>
+
+        <div class="group">
+            <div class="label">Họ và tên</div>
+            <input id="fullname" placeholder="Nhập họ tên">
+        </div>
+
+        <div class="group">
+            <div class="label">Số điện thoại</div>
+            <input id="phone" placeholder="0123 456 789">
+        </div>
+
+        <div class="group">
+            <div class="label">Email</div>
+            <input id="email" placeholder="email@example.com">
+        </div>
+
+            <button onclick="submitBooking()">Đặt bàn</button>
+
+    </div>
+</div>
+<script src="jss/trang2.js"></script>
+</body>
+</html>
+

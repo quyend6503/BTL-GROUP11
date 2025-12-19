@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Đặt bàn - Gánh Quán</title>
+
+    <!-- FONT POPPINS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/trang1.css">
+<link rel="icon" type="image/jpeg" href="images/logo.jpg">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Đặt bàn ngay</h2>
+        <p class="sub">Địa chỉ: 12 Chùa Bộc — Hotline: 0123456789</p>
+
+        <div class="card">
+
+            <div class="row">
+                <!-- SỐ NGƯỜI -->
+                <label>
+                    Số người
+                    <input id="people" type="number" min="1" placeholder="VD: 4">
+                </label>
+
+                <!-- NGÀY -->
+                <label>
+                    Ngày
+                    <input id="date" type="date">
+                </label>
+
+                <!-- GIỜ -->
+                <label>
+                    Giờ
+                    <input id="time" type="time">
+                </label>
+            </div>
+
+            <button onclick="goNextPage()">Tìm bàn</button>
+
+        </div>
+
+    </div>
+
+<script src="jss/trang1.js"></script>
+
+</body>
+
+</html>
+
