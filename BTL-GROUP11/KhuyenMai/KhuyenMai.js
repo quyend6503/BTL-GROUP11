@@ -95,8 +95,7 @@ shuffleArray(Secret).forEach(sec => {
         if(b !== div) b.style.display = 'none';
     });    
     codeDisplay.innerHTML = `Mã khuyến mại: ${sec.code}<br>${sec.content}`;
-
-        // Hiển thị container nút
+    // Hiển thị container nút
     box.style.display = 'block';
     copyBtn.textContent = sec.code; // Hiển thị mã trên nút
   });
@@ -156,5 +155,3 @@ shuffleArray(Secret).forEach(sec => {
     });
   });
 });
-
-
