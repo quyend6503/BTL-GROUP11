@@ -1,4 +1,30 @@
  document.getElementById("selectedTable").classList.add("active");
+ // =================== LOAD HEADER & FOOTER ===================
+async function includeHTML(id, file) {
+  const element = document.getElementById(id);
+  if (!element) return;
+
+  try {
+    const response = await fetch(file);
+    if (!response.ok) throw new Error("Không thể load " + file);
+    element.innerHTML = await response.text();
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  includeHTML("header", "../layout/Header.html");
+  includeHTML("footer", "../layout/Footer.html");
+});
+
+
+// =================== TOGGLE MENU (NẾU CÒN DÙNG) ===================
+function toggleMenu() {
+  const nav = document.querySelector(".nav");
+  if (nav) nav.classList.toggle("active");
+}
+
 
  // LẤY DỮ LIỆU TỪ TEST 1
     document.getElementById("showPeople").innerText = localStorage.getItem("people") || "--";

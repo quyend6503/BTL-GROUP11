@@ -25,11 +25,11 @@ body {
 .detail-container {
   max-width: 900px;
   width: 100%;
-  background: #1a1a1a;
+  background: #111;
   border-radius: 18px;
   overflow: hidden;
   border: 1px solid rgba(238, 174, 24, 0.25);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+ 
   transition: 0.3s;
 }
 

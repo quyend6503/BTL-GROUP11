@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Gánh Quán - Chi tiết tin tức</title>
   <link rel="icon" type="image/png" href="img/LOGO.png">
-  <link rel="stylesheet" href="chitiettintuc.css">
+  <link rel="stylesheet" href="css/chitiettintuc.css">
 </head>
 <body>
 
@@ -18,8 +18,8 @@
   <div id="footer"></div>
 
   <!-- DATA -->
-  <script src="datatintuc.js"></script>
-
+  <script src="script/datatintuc.js"></script>
+<script src="script/chitiettintuc.js"></script>
   <!-- JS XỬ LÝ CHI TIẾT -->
   <script>
     const params = new URLSearchParams(window.location.search);
@@ -57,6 +57,7 @@
       document.getElementById("chitiet").innerHTML = "<h2>Không tìm thấy bài viết</h2>";
     }
   </script>
+
 
 </body>
 </html>

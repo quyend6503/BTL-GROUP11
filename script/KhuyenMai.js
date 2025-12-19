@@ -12,12 +12,35 @@ function loadHTML(id, file) {
     .catch(err => console.error(err));
 }
 
-// Load header và footer
-loadHTML('header', '../layout/Header.html');
-loadHTML('footer', '../layout/Footer.html');
+// =================== LOAD HEADER & FOOTER ===================
+async function includeHTML(id, file) {
+  const element = document.getElementById(id);
+  if (!element) return;
+
+  try {
+    const response = await fetch(file);
+    if (!response.ok) throw new Error("Không thể load " + file);
+    element.innerHTML = await response.text();
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  includeHTML("header", "../layout/Header.html");
+  includeHTML("footer", "../layout/Footer.html");
+});
+
+
+// =================== TOGGLE MENU (NẾU CÒN DÙNG) ===================
+function toggleMenu() {
+  const nav = document.querySelector(".nav");
+  if (nav) nav.classList.toggle("active");
+}
+
 
 /*-------------------Khuyến mại dành cho dùng bữa tại nhà hàng*/
-import { KhuyenMai } from './ObjectGanhQuan.js';
+import { KhuyenMai } from 'ObjectGanhQuan.js';
 
 const container = document.getElementById('deal-items');
 
@@ -43,7 +66,7 @@ KhuyenMai.forEach(promo => {
   });
 });
 /*-------------------Ưu đãi dành cho giao hàng và nhận hàng*/
-import { uudai } from './ObjectGanhQuan.js';
+import { uudai } from 'ObjectGanhQuan.js';
 const uudaiContainer = document.getElementById('dealsship');
 
 uudai.forEach(promo => {
@@ -110,7 +133,7 @@ shuffleArray(Secret).forEach(sec => {
   });
 });*/
 
-import { Secret } from './ObjectGanhQuan.js';
+import { Secret } from 'ObjectGanhQuan.js';
 
 const box = document.getElementById('secret-container');
 

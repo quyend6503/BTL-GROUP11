@@ -32,8 +32,8 @@ buttons.forEach(btn => {
 
         setTimeout(() => {
             img.src = mode === "day"
-                ? "../AboutUs/ImgAboutUs/ngay1.jpg"
-                : "../AboutUs/ImgAboutUs/toi2.jpg";
+                ? "../img/ImgAboutUs/ngay1.jpg"
+                : "../img/ImgAboutUs/toi2.jpg";
 
             img.style.opacity = 1; // Fade in
         }, 300);

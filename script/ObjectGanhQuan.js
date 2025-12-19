@@ -14,7 +14,7 @@ const KhuyenMai = [
     {
         id: '02',
         title: "🎄 NOEL ẤM LÒNG - ĐONG ĐẤY ẤM ÁP",
-        image: "./ImgKhuyenMai/che.jpg",
+        image: "../img/ImgKhuyenMai/che.jpg",
         description: '<span class="highlight-deal">Deal Giáng Sinh</span>',
         content: `
                 <li>Giảm 20% hóa đơn cho bàn từ 2 người</li>
@@ -27,7 +27,7 @@ const KhuyenMai = [
     {
         id: '03',
         title: "🍵 ẤM BỤNG ẤM LÒNG",
-        image: "./ImgKhuyenMai/tra.jpg",
+        image: "../img/ImgKhuyenMai/tra.jpg",
         description: '<span class="highlight-deal">Deal Quà nhỏ</span>',
         content: `
                 <li>Tặng trà nóng cho mỗi bàn</li>
@@ -38,7 +38,7 @@ const KhuyenMai = [
     {
         id: '04',
         title: "🍲MÂM CƠM NOEL",
-        image: "./ImgKhuyenMai/nem.jpg",
+        image: "../img/ImgKhuyenMai/nem.jpg",
         description: '<span class="highlight-deal">Deal Quà nhỏ</span>',
         content: `
                 <li>Gà quay lá chanh, sườn nướng mật ong, canh nấm, xôi gấc</li>
@@ -50,7 +50,7 @@ const KhuyenMai = [
     {
         id: '05',
         title: "🥘 GÁNH QUÁN MỜI CƠM",
-        image: "./ImgKhuyenMai/gaquay.jpg",
+        image: "../img/ImgKhuyenMai/gaquay.jpg",
         description: '<span class="highlight-deal">Deal Giáng sinh</span>',
         content: `
                 <li>Gà quay lá chanh, sườn nướng mật ong</li>
@@ -67,7 +67,7 @@ const uudai = [
     {
         id: '01',
         title: "ƯU ĐÃI GIỜ CƠM TRƯA",
-        image: "./ImgKhuyenMai/bun.jpg",
+        image: "../img/ImgKhuyenMai/bun.jpg",
         description: '',
         content: `
         <ul>
@@ -80,7 +80,7 @@ const uudai = [
     {
         id: '02',
         title: "QUÀ NHỎ THEO ĐƠN",
-        image: "./ImgKhuyenMai/nuoc.jpg",
+        image: "../img/ImgKhuyenMai/nuoc.jpg",
         description: '',
         content: `
            <ul>
@@ -93,7 +93,7 @@ const uudai = [
     {
         id: '03',
         title: "ĐẶT CÀNG NHIỀU, DEAL CÀNG LỜI",
-        image: "./ImgKhuyenMai/giadinh.jpg",
+        image: "../img/ImgKhuyenMai/giadinh.jpg",
         description: '',
         content: `
         <ul>
@@ -111,7 +111,7 @@ const uudai = [
     {
         id: '01',
         title: "ƯU ĐÃI GIỜ CƠM TRƯA",
-        image: "../KhuyenMai/ImgKhuyenMai/bun.jpg",
+        image: "../img/ImgKhuyenMai/bun.jpg",
         description: '',
         content: `
         <ul>
@@ -124,7 +124,7 @@ const uudai = [
     {
         id: '02',
         title: "QUÀ NHỎ THEO ĐƠN",
-        image: "../KhuyenMai/ImgKhuyenMai/nuoc.jpg",
+        image: "../img/ImgKhuyenMai/nuoc.jpg",
         description: '',
         content: `
            <ul>
@@ -137,7 +137,7 @@ const uudai = [
     {
         id: '03',
         title: "ĐẶT CÀNG NHIỀU, DEAL CÀNG LỜI",
-        image: "../KhuyenMai/ImgKhuyenMai/giadinh.jpg",
+        image: "../img/KhuyenMai/ImgKhuyenMai/giadinh.jpg",
         description: '',
         content: `
         <ul>
@@ -154,7 +154,7 @@ const Secret = [
   {
     id: '01',
     title: "Giảm 10%",
-    image: "../KhuyenMai/ImgKhuyenMai/box.png",
+    image: "../img/ImgKhuyenMai/box.png",
     code: "GANHQUAN2025<br>Giảm giá đơn hàng 10%",
     description: "",
     content: `
@@ -164,7 +164,7 @@ const Secret = [
   {
     id: '02',
     title: "Tặng bạn 50k",
-    image: "../KhuyenMai/ImgKhuyenMai/box.png",
+    image: "../img/KhuyenMai/ImgKhuyenMai/box.png",
     code: "HELLO50<br>Tặng bạn 50k",
     description: "Click để mở hộp và nhận mã!",
     content: `
@@ -174,7 +174,7 @@ const Secret = [
   {
     id: '03',
     title: "FREESHIP 30k",
-    image: "../KhuyenMai/ImgKhuyenMai/box.png",
+    image: "../img/ImgKhuyenMai/box.png",
     code: "FREESHIP<br>Giảm 30k phí ship",
     description: "Click để mở hộp và nhận mã!",
     content: `
@@ -184,7 +184,7 @@ const Secret = [
     {
     id: '04',
     title: "",
-    image: "../KhuyenMai/ImgKhuyenMai/box.png",
+    image: "../img/ImgKhuyenMai/box.png",
     code: "Chúc bạn may mắn lần sau!<br>&#10084&#10084&#10084",
     description: "Click để mở hộp và nhận mã!",
     content: `

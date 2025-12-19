@@ -20,7 +20,7 @@ body {
 
 .ourstory {
     margin-top: 0;
-    background-image: url('../AboutUs/ImgAboutUs/story.jpg');
+    background-image: url('../img/ImgAboutUs/story.jpg');
     background-size: cover;
     background-position: center;
     height: 1000px;

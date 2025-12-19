@@ -1,3 +1,28 @@
+// =================== LOAD HEADER & FOOTER ===================
+async function includeHTML(id, file) {
+  const element = document.getElementById(id);
+  if (!element) return;
+
+  try {
+    const response = await fetch(file);
+    if (!response.ok) throw new Error("Không thể load " + file);
+    element.innerHTML = await response.text();
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  includeHTML("header", "../layout/Header.html");
+  includeHTML("footer", "../layout/Footer.html");
+});
+
+
+// =================== TOGGLE MENU (NẾU CÒN DÙNG) ===================
+function toggleMenu() {
+  const nav = document.querySelector(".nav");
+  if (nav) nav.classList.toggle("active");
+}
 
         // NGÀY MIN = HÔM NAY
         const today = new Date().toISOString().split("T")[0];
@@ -50,6 +75,6 @@
     localStorage.setItem("date", d);
     localStorage.setItem("time", t);
 
-    window.location.href = "trang2.html";
+    window.location.href = "datban2.html";
 }
 

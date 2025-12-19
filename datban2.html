@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chọn bàn - Gánh Quán</title>
+    <title>Gánh Quán - Chọn bàn</title>
 
     <!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="css/trang2.css">
-<link rel="icon" type="image/jpeg" href="images/logo.jpg">
+<link rel="icon" type="image/jpeg" href="img/LOGO.png">
 </head>
 
 <body>
-
+<div id="header"></div>
 <div class="page">
 
     <!-- SƠ ĐỒ BÀN -->
@@ -21,14 +21,14 @@
         <h2>Chọn bàn muốn đặt</h2>
 
         <div class="table-box" id="tableBox" onclick="resetZoom(event)">
-            <img id="floorImg" src="images/sodo1.jpg">
+            <img id="floorImg" src="img/img đặt bàn/sodo1.jpg">
             <!-- HOTSPOTS giữ nguyên vị trí hiện tại -->
-            <div class="hotspot" style="left: 45.8%; top: 16%" onclick="zoomToSpot(event,this,'Bàn VIP (8-10 người)','images/Banvip.png')"></div>
-             <div class="hotspot" style="right: 19%; top: 20%;" onclick="zoomToSpot(event,this,'Bàn sự kiện (12-20 người)','images/Bansukien.png')"></div>
-             <div class="hotspot" style="right: 18%; top: 44%;" onclick="zoomToSpot(event,this,'Bàn gia đình 1 (6-10 người)','images/Bangiadinh.png')"></div>
-             <div class="hotspot" style="left: 19%; top: 19%;" onclick="zoomToSpot(event,this,'Bàn gia đình 2 (6-10 người)','images/Bangiadinh.png')"></div>
-             <div class="hotspot" style="left: 18%; top: 48%;" onclick="zoomToSpot(event,this,'Bàn gia đình 3 (6-10 người)','images/Bangiadinh.png')"></div>
-             <div class="hotspot" style="right: 35%; top: 20%;" onclick="zoomToSpot(event,this,'Bàn to (6-10 người)','images/Banto.png')"></div>
+            <div class="hotspot" style="left: 45.8%; top: 16%" onclick="zoomToSpot(event,this,'Bàn VIP (8-10 người)','img/img đặt bàn/Banvip.png')"></div>
+             <div class="hotspot" style="right: 19%; top: 20%;" onclick="zoomToSpot(event,this,'Bàn sự kiện (12-20 người)','img/img đặt bàn/Bansukien.png')"></div>
+             <div class="hotspot" style="right: 18%; top: 44%;" onclick="zoomToSpot(event,this,'Bàn gia đình 1 (6-10 người)','img/img đặt bàn/Bangiadinh.png')"></div>
+             <div class="hotspot" style="left: 19%; top: 19%;" onclick="zoomToSpot(event,this,'Bàn gia đình 2 (6-10 người)','img/img đặt bàn/Bangiadinh.png')"></div>
+             <div class="hotspot" style="left: 18%; top: 48%;" onclick="zoomToSpot(event,this,'Bàn gia đình 3 (6-10 người)','img/img đặt bàn/Bangiadinh.png')"></div>
+             <div class="hotspot" style="right: 35%; top: 20%;" onclick="zoomToSpot(event,this,'Bàn to (6-10 người)','img/img đặt bàn/Banto.png')"></div>
             <div class="hotspot" style="right: 43%;top: 69%; " onclick="zoomToSpot(event,this,'Bàn nhỏ (2-4 người)')"></div>
             <div class="hotspot" style="right: 37.6%;top: 69%; " onclick="zoomToSpot(event,this,'Bàn nhỏ (2-4 người)')"></div>
             <div class="hotspot" style="right: 32.5%;top: 69%; " onclick="zoomToSpot(event,this,'Bàn nhỏ (2-4 người)')"></div>
@@ -85,7 +85,8 @@
 
     </div>
 </div>
-<script src="jss/trang2.js"></script>
+<div id="footer"></div>
+<script src="script/jsdatban/trang2.js"></script>
 </body>
 </html>
 

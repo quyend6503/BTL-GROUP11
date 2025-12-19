@@ -304,7 +304,7 @@ button {
   border-radius: 16px;
   box-shadow: 0 0 20px rgba(3, 17, 30, 0.6); 
   margin: 24px 0;
-  margin-top: 12px;
+  margin-top: 0px;
   padding-top: 20px;
 
 }
@@ -406,8 +406,8 @@ button {
 ===================================== */
 .camnhan-khach {
   position: relative;
-  height: 420px;
-  background: url("img/img trang chủ/img tin tức/b2t6.jpg") center/cover no-repeat;
+  height: 500px;
+  background: url("../img/img trang chủ/img tin tức/b2t5.jpg") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -505,7 +505,7 @@ button {
   justify-content: center;
   gap: 28px;
   flex-wrap: wrap;
-  margin: 10px 0 20px;
+  margin: 10px 0 80px;
 }
 
 .tintuc-images > div {
@@ -516,7 +516,7 @@ button {
 .tintuc-link {
   display: flex;
   flex-direction: column;
-  height: 360px; /* CỐ ĐỊNH CHIỀU CAO */
+  height: 360px; 
   border-radius: 16px;
   overflow: hidden;
   text-decoration: none;
