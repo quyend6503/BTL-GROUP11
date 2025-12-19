@@ -13,8 +13,8 @@ async function includeHTML(id, file) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  includeHTML("header", "../layout/Header.html");
-  includeHTML("footer", "../layout/Footer.html");
+  includeHTML("header", "../layout/header.html");
+  includeHTML("footer", "../layout/footer.html");
 });
 
 

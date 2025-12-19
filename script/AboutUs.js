@@ -10,10 +10,11 @@ function loadHTML(id, file) {
         })
         .catch(err => console.error(err));
 }
+document.addEventListener("DOMContentLoaded", () => {
+  includeHTML("header", "../layout/header.html");
+  includeHTML("footer", "../layout/footer.html");
+});
 
-// Load header và footer
-loadHTML('header', '../layout/Header.html');
-loadHTML('footer', '../layout/Footer.html');
 
 // ========== SWITCH IMAGE LOGIC ==========
 const buttons = document.querySelectorAll(".lighting-btn");

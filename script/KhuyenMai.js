@@ -1,16 +1,3 @@
-// 1. Load header và footer
-// Hàm load file HTML vào 1 thẻ
-function loadHTML(id, file) {
-  fetch(file)
-    .then(response => {
-      if (!response.ok) throw new Error('Không tải được file: ' + file);
-      return response.text();
-    })
-    .then(html => {
-      document.getElementById(id).innerHTML = html;
-    })
-    .catch(err => console.error(err));
-}
 
 // =================== LOAD HEADER & FOOTER ===================
 async function includeHTML(id, file) {
@@ -27,9 +14,10 @@ async function includeHTML(id, file) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  includeHTML("header", "../layout/Header.html");
-  includeHTML("footer", "../layout/Footer.html");
+  includeHTML("header", "../layout/header.html");
+  includeHTML("footer", "../layout/footer.html");
 });
+
 
 
 // =================== TOGGLE MENU (NẾU CÒN DÙNG) ===================
