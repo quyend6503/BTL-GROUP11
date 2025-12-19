@@ -106,46 +106,91 @@ const uudai = [
     ];
 export {uudai };
 
+/*-------------------Ưu đãi dành cho giao hàng và nhận hàng*/
+const uudai = [
+    {
+        id: '01',
+        title: "ƯU ĐÃI GIỜ CƠM TRƯA",
+        image: "../KhuyenMai/ImgKhuyenMai/bun.jpg",
+        description: '',
+        content: `
+        <ul>
+          <li>Đơn tối thiểu 100.000đ</li>
+          <li>Hỗ trợ <strong>15.000đ</strong> phí vận chuyển cho cơm trưa</li>
+          <li>Áp dụng từ <strong> 11:00 – 13:00, Thứ 2 – Thứ 6</strong></li>
+        </ul>
+    `
+    },
+    {
+        id: '02',
+        title: "QUÀ NHỎ THEO ĐƠN",
+        image: "../KhuyenMai/ImgKhuyenMai/nuoc.jpg",
+        description: '',
+        content: `
+           <ul>
+           <li>Đơn tối thiểu 100.000đ</li>
+          <li>Tặng món ăn kèm/ nước</li>
+          <li>Áp dụng số lượng có hạn mỗi ngày</li>
+        </ul>
+    `
+    },
+    {
+        id: '03',
+        title: "ĐẶT CÀNG NHIỀU, DEAL CÀNG LỜI",
+        image: "../KhuyenMai/ImgKhuyenMai/giadinh.jpg",
+        description: '',
+        content: `
+        <ul>
+          <li>Đơn tối thiểu 500.000đ</li>
+          <li>Giảm trực tiếp <strong>100.000đ</strong></li>
+          <li>Áp dụng từ <strong>20/12 – 25/12</strong>, cho cho các đơn giao hàng</li>
+        </ul>
+    `
+    },
+    ];
+export {uudai };
+
 const Secret = [
   {
     id: '01',
-    title: "🎁 Giáng Sinh Bí Mật",
-    image: "./ImgKhuyenMai/box.png",
-    code: "XMAS50",
+    title: "Giảm 10%",
+    image: "../KhuyenMai/ImgKhuyenMai/box.png",
+    code: "GANHQUAN2025<br>Giảm giá đơn hàng 10%",
     description: "",
     content: `
-        Giảm 50% cho đơn hàng trên 500.000đ
+        Giảm giá đơn hàng 10%
     `
   },
   {
     id: '02',
-    title: "🎄 Deal Noel",
-    image: "./ImgKhuyenMai/box.png",
-    code: "NOEL20",
+    title: "Tặng bạn 50k",
+    image: "../KhuyenMai/ImgKhuyenMai/box.png",
+    code: "HELLO50<br>Tặng bạn 50k",
     description: "Click để mở hộp và nhận mã!",
     content: `
-        Giảm 15% cho hóa đơn trên 5 người
+        Giảm 50k
     `
   },
   {
     id: '03',
-    title: "🎄 Deal Noel",
-    image: "./ImgKhuyenMai/box.png",
-    code: "NOEL20",
+    title: "FREESHIP 30k",
+    image: "../KhuyenMai/ImgKhuyenMai/box.png",
+    code: "FREESHIP<br>Giảm 30k phí ship",
     description: "Click để mở hộp và nhận mã!",
     content: `
-        Giảm 20% phí ship
+        Giảm 30k phí ship
     `
   },
     {
     id: '04',
-    title: "🎄 Deal Noel",
-    image: "./ImgKhuyenMai/box.png",
-    code: "NOEL20",
+    title: "",
+    image: "../KhuyenMai/ImgKhuyenMai/box.png",
+    code: "Chúc bạn may mắn lần sau!<br>&#10084&#10084&#10084",
     description: "Click để mở hộp và nhận mã!",
     content: `
-        Giảm 20% cho mọi món ăn
+        
     `
   },  
 ];
 export {Secret};
+

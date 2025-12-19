@@ -38,7 +38,7 @@ DEAL ITEM
 /* Card từng khuyến mại */
 .deal-item {
     display: flex;
-    background: #1a1a1a;
+    background: transition;
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -259,14 +259,13 @@ HỘP QUÀ BÍ ẨN
     background-size: cover;
     background-position: center;
 }
-
+/*
 .promo-code {
     font-weight: bold;
-    font-size: 20px;
     min-height: 40px;   
     text-align: center;
     color: white;
-}
+}*/
 
 .box-img {
     
@@ -288,7 +287,7 @@ HỘP QUÀ BÍ ẨN
 
 .copy-btn {
   padding: 5px 10px;
-  font-size: 40px;
+  font-size: 30px;
   cursor: pointer;
   background-color: #ffb400;
   border: none;
