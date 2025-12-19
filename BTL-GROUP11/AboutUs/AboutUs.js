@@ -1,19 +1,19 @@
-  // Hàm load file HTML vào 1 thẻ
-  function loadHTML(id, file) {
+// Hàm load file HTML vào 1 thẻ
+function loadHTML(id, file) {
     fetch(file)
-      .then(response => {
-        if (!response.ok) throw new Error('Không tải được file: ' + file);
-        return response.text();
-      })
-      .then(html => {
-        document.getElementById(id).innerHTML = html;
-      })
-      .catch(err => console.error(err));
-  }
+        .then(response => {
+            if (!response.ok) throw new Error('Không tải được file: ' + file);
+            return response.text();
+        })
+        .then(html => {
+            document.getElementById(id).innerHTML = html;
+        })
+        .catch(err => console.error(err));
+}
 
-  // Load header và footer
-  loadHTML('header', '../layout/Header.html');
-  loadHTML('footer', '../layout/Footer.html');
+// Load header và footer
+loadHTML('header', '../layout/Header.html');
+loadHTML('footer', '../layout/Footer.html');
 
 // ========== SWITCH IMAGE LOGIC ==========
 const buttons = document.querySelectorAll(".lighting-btn");
@@ -31,7 +31,7 @@ buttons.forEach(btn => {
         img.style.opacity = 0;  // Fade out
 
         setTimeout(() => {
-            img.src = mode === "day" 
+            img.src = mode === "day"
                 ? "../AboutUs/ImgAboutUs/ngay3.jpg"
                 : "../AboutUs/ImgAboutUs/toi1.jpg";
 
@@ -68,26 +68,26 @@ const cards = document.querySelectorAll('.chef-card');
 let current = 0;
 
 function updateSlider() {
-  cards.forEach((card, i) => {
-    card.classList.remove('active');
-    if (i === current) {
-      card.classList.add('active');
-    }
-  });
+    cards.forEach((card, i) => {
+        card.classList.remove('active');
+        if (i === current) {
+            card.classList.add('active');
+        }
+    });
 
-  const offset = -(current * 340);
-  document.querySelector('.slider-track')
-    .style.transform = `translateX(${offset}px)`;
+    const offset = -(current * 340);
+    document.querySelector('.slider-track')
+        .style.transform = `translateX(${offset}px)`;
 }
 
 document.querySelector('.next').onclick = () => {
-  current = (current + 1) % cards.length;
-  updateSlider();
+    current = (current + 1) % cards.length;
+    updateSlider();
 };
 
 document.querySelector('.prev').onclick = () => {
-  current = (current - 1 + cards.length) % cards.length;
-  updateSlider();
+    current = (current - 1 + cards.length) % cards.length;
+    updateSlider();
 };
 
 updateSlider();
