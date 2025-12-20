@@ -19,7 +19,7 @@ body::-webkit-scrollbar {
         .page-bg {
   position: fixed;
   inset: 0;
-  background: url("../images/sodo1.jpg") center/cover no-repeat;
+  background: url("../img/sodo1.jpg") center/cover no-repeat;
   filter: blur(7px);
   z-index: -2;
 }
