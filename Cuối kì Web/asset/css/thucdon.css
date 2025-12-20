@@ -1,12 +1,15 @@
-* {
+.menu-page .catalog-list *,
+.menu-page .product-container * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+
+.menu-page {
   font-family: 'Poppins', sans-serif;
-  background-color: #111 !important;
+  background-color: #111;
+ 
 }
 
 body::-webkit-scrollbar { display: none; } /* Ẩn thanh cuộn ngang trên trình duyệt Webkit (Chrome, Safari) */
@@ -15,7 +18,7 @@ body::-webkit-scrollbar { display: none; } /* Ẩn thanh cuộn ngang trên trì
 /* Banner container */
 .banner {
   position: relative;
-  height: 80vh;
+  height: 550px;
   overflow: hidden;
 }
 

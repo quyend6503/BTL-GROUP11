@@ -1,12 +1,8 @@
-* {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-size: 20px;
-      font-weight: 10000px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
+.header,
+.header * {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
     .header {
       top: 0;
       justify-content: space-between;
@@ -18,11 +14,17 @@
       color: white;
       z-index: 100;
       display: flex;
+      font-size: 20px;
+      line-height: normal;
+      gap: 40px;
+      
     }
 
     .header a {
-      color: white;
-      text-decoration: none;
+      color: #fff;
+  text-decoration: none;
+    align-items: center;
+
     }
 
     .logo img {
@@ -36,7 +38,10 @@
       gap: 30px;
       flex-grow: 1;
       justify-content: center;
-      
+       height: 100%;
+  align-items: center;
+  gap: 30px;
+
     }
 
     .nav a {
@@ -54,6 +59,10 @@
       display: inline-block;
       align-items: center;
       transition: transform 0.2s;
+      font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
     }
 
     .nav a span:hover {
@@ -77,24 +86,44 @@
     }
 
     .search-area {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+        display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 80px;
     }
 
     .search-area input {
-      padding: 6px 10px;
-      border-radius: 6px;
-      border: 1px solid #999;
-    }
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 6px;
+  border: 1px solid #999;
+  background: #fff;
+  color: #000;
+  font-size: 15px;
+  line-height: 36px;
+}
+
+
+    .header .search-area input {
+  background: #fff;
+  color: #000;
+  border: 1px solid #999;
+}
+
 
     .lang-btn {
-      background: #a67c52;
-      color: white;
-      border: none;
-      padding: 7px 15px;
-      border-radius: 6px;
-    }
+  height: 36px;
+  padding: 0 14px;
+  background: #a67c52;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 36px; /* ÉP CHỮ GIỮA */
+}
 
 
     .hamburger {
@@ -103,6 +132,7 @@
       color: white;
       cursor: pointer;
     }
+    
 
     @media (max-width: 768px) {
       .nav {

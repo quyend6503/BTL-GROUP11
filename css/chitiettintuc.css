@@ -8,11 +8,18 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
+html, body {
   background: #111;
   color: #fff;
   min-height: 100vh;
   line-height: 1.6;
+     overflow-y: auto;
+    scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
 #chitiet {
