@@ -13,10 +13,9 @@ async function includeHTML(id, file) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  includeHTML("header", "/Ganh-Quan/layout/header.html");
-  includeHTML("footer", "/Ganh-Quan/layout/footer.html");
+  includeHTML("header", "layout/header.html");
+  includeHTML("footer", "layout/footer.html");
 });
-
 
 
 // =================== TOGGLE MENU (NẾU CÒN DÙNG) ===================
