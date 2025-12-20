@@ -3,7 +3,7 @@ const KhuyenMai = [
     {
         id: '01',
         title: "🎁BỮA TỐI NOEL – 2 NGƯỜI",
-        image: "./ImgKhuyenMai/noel.jpg",
+        image: "img/ImgKhuyenMai/noel.jpg",
         description: '<span class="highlight-deal">Deal Giáng Sinh</span>',
         content: `
                 <li>Tặng 2 ly trà nóng mùa Giáng Sinh</li>
@@ -14,7 +14,7 @@ const KhuyenMai = [
     {
         id: '02',
         title: "🎄 NOEL ẤM LÒNG - ĐONG ĐẤY ẤM ÁP",
-        image: "../img/ImgKhuyenMai/che.jpg",
+        image: "img/ImgKhuyenMai/che.jpg",
         description: '<span class="highlight-deal">Deal Giáng Sinh</span>',
         content: `
                 <li>Giảm 20% hóa đơn cho bàn từ 2 người</li>
@@ -27,7 +27,7 @@ const KhuyenMai = [
     {
         id: '03',
         title: "🍵 ẤM BỤNG ẤM LÒNG",
-        image: "../img/ImgKhuyenMai/tra.jpg",
+        image: "img/ImgKhuyenMai/tra.jpg",
         description: '<span class="highlight-deal">Deal Quà nhỏ</span>',
         content: `
                 <li>Tặng trà nóng cho mỗi bàn</li>
@@ -38,7 +38,7 @@ const KhuyenMai = [
     {
         id: '04',
         title: "🍲MÂM CƠM NOEL",
-        image: "../img/ImgKhuyenMai/nem.jpg",
+        image: "img/ImgKhuyenMai/nem.jpg",
         description: '<span class="highlight-deal">Deal Quà nhỏ</span>',
         content: `
                 <li>Gà quay lá chanh, sườn nướng mật ong, canh nấm, xôi gấc</li>
@@ -50,7 +50,7 @@ const KhuyenMai = [
     {
         id: '05',
         title: "🥘 GÁNH QUÁN MỜI CƠM",
-        image: "../img/ImgKhuyenMai/gaquay.jpg",
+        image: "img/ImgKhuyenMai/gaquay.jpg",
         description: '<span class="highlight-deal">Deal Giáng sinh</span>',
         content: `
                 <li>Gà quay lá chanh, sườn nướng mật ong</li>
@@ -67,7 +67,7 @@ const uudai = [
     {
         id: '01',
         title: "ƯU ĐÃI GIỜ CƠM TRƯA",
-        image: "../img/ImgKhuyenMai/bun.jpg",
+        image: "img/ImgKhuyenMai/bun.jpg",
         description: '',
         content: `
         <ul>
@@ -80,7 +80,7 @@ const uudai = [
     {
         id: '02',
         title: "QUÀ NHỎ THEO ĐƠN",
-        image: "../img/ImgKhuyenMai/nuoc.jpg",
+        image: "img/ImgKhuyenMai/nuoc.jpg",
         description: '',
         content: `
            <ul>
@@ -93,7 +93,7 @@ const uudai = [
     {
         id: '03',
         title: "ĐẶT CÀNG NHIỀU, DEAL CÀNG LỜI",
-        image: "../img/ImgKhuyenMai/giadinh.jpg",
+        image: "img/ImgKhuyenMai/giadinh.jpg",
         description: '',
         content: `
         <ul>
@@ -104,57 +104,13 @@ const uudai = [
     `
     },
     ];
-export {uudai };
-
-/*-------------------Ưu đãi dành cho giao hàng và nhận hàng*/
-const uudai = [
-    {
-        id: '01',
-        title: "ƯU ĐÃI GIỜ CƠM TRƯA",
-        image: "../img/ImgKhuyenMai/bun.jpg",
-        description: '',
-        content: `
-        <ul>
-          <li>Đơn tối thiểu 100.000đ</li>
-          <li>Hỗ trợ <strong>15.000đ</strong> phí vận chuyển cho cơm trưa</li>
-          <li>Áp dụng từ <strong> 11:00 – 13:00, Thứ 2 – Thứ 6</strong></li>
-        </ul>
-    `
-    },
-    {
-        id: '02',
-        title: "QUÀ NHỎ THEO ĐƠN",
-        image: "../img/ImgKhuyenMai/nuoc.jpg",
-        description: '',
-        content: `
-           <ul>
-           <li>Đơn tối thiểu 100.000đ</li>
-          <li>Tặng món ăn kèm/ nước</li>
-          <li>Áp dụng số lượng có hạn mỗi ngày</li>
-        </ul>
-    `
-    },
-    {
-        id: '03',
-        title: "ĐẶT CÀNG NHIỀU, DEAL CÀNG LỜI",
-        image: "../img/KhuyenMai/ImgKhuyenMai/giadinh.jpg",
-        description: '',
-        content: `
-        <ul>
-          <li>Đơn tối thiểu 500.000đ</li>
-          <li>Giảm trực tiếp <strong>100.000đ</strong></li>
-          <li>Áp dụng từ <strong>20/12 – 25/12</strong>, cho cho các đơn giao hàng</li>
-        </ul>
-    `
-    },
-    ];
-export {uudai };
+export { uudai };
 
 const Secret = [
   {
     id: '01',
     title: "Giảm 10%",
-    image: "../img/ImgKhuyenMai/box.png",
+    image: "img/ImgKhuyenMai/box.png",
     code: "GANHQUAN2025<br>Giảm giá đơn hàng 10%",
     description: "",
     content: `
@@ -164,7 +120,7 @@ const Secret = [
   {
     id: '02',
     title: "Tặng bạn 50k",
-    image: "../img/KhuyenMai/ImgKhuyenMai/box.png",
+    image: "img/ImgKhuyenMai/box.png",
     code: "HELLO50<br>Tặng bạn 50k",
     description: "Click để mở hộp và nhận mã!",
     content: `
@@ -174,7 +130,7 @@ const Secret = [
   {
     id: '03',
     title: "FREESHIP 30k",
-    image: "../img/ImgKhuyenMai/box.png",
+    image: "img/ImgKhuyenMai/box.png",
     code: "FREESHIP<br>Giảm 30k phí ship",
     description: "Click để mở hộp và nhận mã!",
     content: `
@@ -184,7 +140,7 @@ const Secret = [
     {
     id: '04',
     title: "",
-    image: "../img/ImgKhuyenMai/box.png",
+    image: "img/ImgKhuyenMai/box.png",
     code: "Chúc bạn may mắn lần sau!<br>&#10084&#10084&#10084",
     description: "Click để mở hộp và nhận mã!",
     content: `
@@ -192,5 +148,4 @@ const Secret = [
     `
   },  
 ];
-export {Secret};
-
+export { Secret };

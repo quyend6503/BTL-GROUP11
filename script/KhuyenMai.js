@@ -1,34 +1,23 @@
-
-// =================== LOAD HEADER & FOOTER ===================
-async function includeHTML(id, file) {
-  const element = document.getElementById(id);
-  if (!element) return;
-
-  try {
-    const response = await fetch(file);
-    if (!response.ok) throw new Error("Không thể load " + file);
-    element.innerHTML = await response.text();
-  } catch (err) {
-    console.error(err);
-  }
+// 1. Load header và footer
+// Hàm load file HTML vào 1 thẻ
+function loadHTML(id, file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) throw new Error('Không tải được file: ' + file);
+      return response.text();
+    })
+    .then(html => {
+      document.getElementById(id).innerHTML = html;
+    })
+    .catch(err => console.error(err));
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  includeHTML("header", "../layout/header.html");
-  includeHTML("footer", "../layout/footer.html");
-});
-
-
-
-// =================== TOGGLE MENU (NẾU CÒN DÙNG) ===================
-function toggleMenu() {
-  const nav = document.querySelector(".nav");
-  if (nav) nav.classList.toggle("active");
-}
-
+// Load header và footer
+loadHTML('header', '../layout/Header.html');
+loadHTML('footer', '../layout/Footer.html');
 
 /*-------------------Khuyến mại dành cho dùng bữa tại nhà hàng*/
-import { KhuyenMai } from 'ObjectGanhQuan.js';
+import { KhuyenMai } from '../script/ObjectGanhQuan.js';
 
 const container = document.getElementById('deal-items');
 
@@ -54,7 +43,7 @@ KhuyenMai.forEach(promo => {
   });
 });
 /*-------------------Ưu đãi dành cho giao hàng và nhận hàng*/
-import { uudai } from 'ObjectGanhQuan.js';
+import { uudai } from '../script/ObjectGanhQuan.js';
 const uudaiContainer = document.getElementById('dealsship');
 
 uudai.forEach(promo => {
@@ -121,7 +110,7 @@ shuffleArray(Secret).forEach(sec => {
   });
 });*/
 
-import { Secret } from 'ObjectGanhQuan.js';
+import { Secret } from '../script/ObjectGanhQuan.js';
 
 const box = document.getElementById('secret-container');
 
@@ -156,7 +145,7 @@ shuffleArray(Secret).forEach(sec => {
 
     // Hiển thị container nút
     promoContainer.style.display = 'block';
-    copyBtn.innerHTML = sec.code; // Hiển thị mã trên nút
+    copyBtn.innerHTML = sec.code; 
   });
 
   // Copy mã khi click nút
