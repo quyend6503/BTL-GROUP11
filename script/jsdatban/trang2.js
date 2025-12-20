@@ -121,16 +121,22 @@ function zoomToSpot(e, hotspot, tableName, imageAfter) {
     }
 
     /* ===== 2/3 THỜI GIAN → ĐỔI ẢNH ===== */
-    setTimeout(() => {
+setTimeout(() => {
 
-        // đổi ảnh khi đang zoom
+    const tempImg = new Image();
+    tempImg.src = imageAfter;
+
+    tempImg.onload = () => {
+
+        // đổi ảnh khi đã load xong
         img.style.transition = "none";
         img.src = imageAfter;
+
         img.style.transformOrigin = "center";
         img.style.transform = "scale(2.5)";
         img.offsetHeight;
 
-        /* ===== ZOOM NHỎ DẦN ===== */
+        /* ZOOM NHỎ DẦN */
         img.style.transition = "transform 0.8s ease";
         img.style.transform = "scale(1)";
 
@@ -139,8 +145,10 @@ function zoomToSpot(e, hotspot, tableName, imageAfter) {
             img.removeEventListener("transitionend", done);
             isZooming = false;
         });
+    };
 
-    }, 500); // ⭐ 2/3 của 600ms
+}, 500);
+
 }
 
 
