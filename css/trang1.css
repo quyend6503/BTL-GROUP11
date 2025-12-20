@@ -1,4 +1,4 @@
-  body {
+  html, body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -6,22 +6,24 @@
             color: white;
                 position: relative;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none; 
         }
-
-        body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    background: url("../images/sodo1.jpg") no-repeat center center/cover;
-    filter: blur(7px);          /* độ mờ */
-    transform: scale(1.1);      /* tránh viền trắng */
-    z-index: -1;
+/* Chrome, Edge, Safari */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
+        .page-bg {
+  position: fixed;
+  inset: 0;
+  background: url("../images/sodo1.jpg") center/cover no-repeat;
+  filter: blur(7px);
+  z-index: -2;
+}
+
         .container {
             width: 100%;
             max-width: 900px;
@@ -66,24 +68,30 @@
         }
 
         label {
-            display: flex;
-            flex-direction: column;
             font-size: 16px;
             color: rgba(255, 255, 255, 0.8);
+            
         }
+        .booking-page label {
+  display: flex;
+  flex-direction: column;
+}
 
-        input {
+
+        .booking-page input {
             margin-top: 8px;
-            height: 52px;
             background: rgba(255, 255, 255, 0.12);
             border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 10px;
             padding: 0 14px;
             color: white;
-            font-size: 16px;
             outline: none;
             transition: border 0.2s;
         }
+.booking-page input {
+  height: 52px;
+  font-size: 16px;
+}
 
         input:focus {
             border-color: #EEAE18;
@@ -93,19 +101,21 @@
         
 
         button {
-            width: 100%;
-            height: 56px;
             margin-top: 30px;
             background: #EEAE18;
             border: none;
             border-radius: 10px;
             color: #03111E;
-            font-size: 20px;
             font-weight: 600;
             cursor: pointer;
             transition: 0.25s;
             box-shadow: 0 4px 18px rgba(238, 174, 24, 0.35);
         }
+.booking-page button {
+  width: 100%;
+  height: 56px;
+  font-size: 20px;
+}
 
         button:hover {
             filter: brightness(1.12);
