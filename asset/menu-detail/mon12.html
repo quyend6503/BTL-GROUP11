@@ -1,0 +1,72 @@
+<div class="overlay" id="overlay">
+
+    <div class="menu-popup">
+        <button class="close-btn1" onclick="closePopup()">✕</button>
+
+        <div class="menu-header">Chi Tiết Món Ăn</div>
+
+        <div class="menu-content">
+
+            <!-- LEFT -->
+            <div class="left-col">
+                <div class="dish-name"> Tôm chiên trứng muối
+                </div>
+                <div class="image-slider">
+                    <button class="arrow left" onclick="prevImage()">❮</button>
+
+                    <img id="dishImage" src="../../Menu-detail/images/tomsot1.jpeg" alt="Món ăn">
+
+                    <button class="arrow right" onclick="nextImage()">❯</button>
+                </div>
+
+
+                <div class="dish-desc">
+Tôm chiên trứng muối là món ăn béo ngậy với lớp sốt trứng muối vàng mịn ôm trọn từng con tôm giòn rụm. Hương vị mặn mà, thơm bùi của trứng muối hòa quyện cùng độ ngọt tự nhiên của tôm tạo nên cảm giác vô cùng “cuốn”. Khi thưởng thức, từng miếng tôm giòn bên ngoài, mềm dai bên trong, thấm sốt đậm đà khiến món ăn trở nên đặc biệt hấp dẫn.
+                </div>
+            </div>
+            <!-- RIGHT -->
+            <div class="menu-info">
+
+                <label>Lựa chọn thêm:</label>
+                <div>
+                    <input type="radio" name="option" value="0"data-name="Tôm sú" checked> Tôm sú <br>
+                    <input type="radio" name="option" value="1000000"data-name="Tôm hùm (+1tr)"> Tôm Hùm (+1tr) <br>
+                </div>
+
+                <label>Ghi chú:</label>
+                <textarea id="noteInput" placeholder="Thêm yêu cầu..."></textarea>
+
+                <label>Thành tiền:
+                    <span id="totalPrice" style="color:white;">280.000đ</span>
+                </label>
+
+                <div class="menu-actions">
+                    <button class="btn-add1" onclick="addToCart(
+        'Tôm chiên trứng muối',
+        currentTotalPrice,
+        currentOptionName,
+        document.getElementById('noteInput')?.value || '',
+        '../../img/menu-detail/tomsot1.jpeg'
+    )">Thêm vào giỏ</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="dialogue-popup" id="dialoguePopup">
+        <img src="../../img/menu-detail/tusena.jpg" class="dialogue-avatar">
+        <div class="dialogue-name">Staff Hiếu</div>
+        <div class="dialogue-text" id="dialogueText"></div>
+        <div class="dialogue-choices" id="dialogueChoices"></div>
+    </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+
+</body>
+
+</html>

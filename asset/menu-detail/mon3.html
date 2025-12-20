@@ -1,0 +1,73 @@
+<div class="overlay" id="overlay">
+
+    <div class="menu-popup">
+        <button class="close-btn1" onclick="closePopup()">✕</button>
+
+        <div class="menu-header">Chi Tiết Món Ăn</div>
+
+        <div class="menu-content">
+
+            <!-- LEFT -->
+            <div class="left-col">
+                <div class="dish-name"> Gà rang gừng 
+                </div>
+
+                <div class="image-slider">
+                    <button class="arrow left" onclick="prevImage()">❮</button>
+
+                    <img id="dishImage" src="../../Menu-detail/images/garanggung1.jpeg" alt="Món ăn">
+
+                    <button class="arrow right" onclick="nextImage()">❯</button>
+                </div>
+
+
+                <div class="dish-desc">
+Gà rang gừng là món ăn đậm đà với những miếng gà được rang săn, thấm đều gia vị. Hương gừng cay ấm hòa cùng tỏi, hành và nước mắm tạo nên mùi thơm đặc trưng, kích thích vị giác. Khi thưởng thức, bạn sẽ cảm nhận được vị mặn ngọt hài hòa, ấm nóng và rất đưa cơm.                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="menu-info">
+
+                <label>Lựa chọn thêm:</label>
+                <div>
+                    <input type="radio" name="option" value="0"data-name="Không thêm" checked> Không thêm <br>
+                    <input type="radio" name="option" value="50000"data-name="Thêm gà"> Thêm gà (+50k)<br>
+                </div>
+
+                <label>Ghi chú:</label>
+                <textarea id="noteInput" placeholder="Thêm yêu cầu..."></textarea>
+
+                <label>Thành tiền:
+                    <span id="totalPrice" style="color:white;">160.000đ</span>
+                </label>
+
+                <div class="menu-actions">
+                    <button class="btn-add1" onclick="addToCart(
+        'Gà rang gừng',
+        currentTotalPrice,
+        currentOptionName,
+        document.getElementById('noteInput')?.value || '',
+        '../../img/menu-detail/garanggung1.jpeg'
+    )">Thêm vào giỏ</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="dialogue-popup" id="dialoguePopup">
+        <img src="../../img/menu-detail/tusena.jpg" class="dialogue-avatar">
+        <div class="dialogue-name">Staff Hiếu</div>
+        <div class="dialogue-text" id="dialogueText"></div>
+        <div class="dialogue-choices" id="dialogueChoices"></div>
+    </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+
+</body>
+
+</html>

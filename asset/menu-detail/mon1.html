@@ -1,0 +1,74 @@
+<div class="overlay" id="overlay">
+
+    <div class="menu-popup">
+        <button class="close-btn1" onclick="closePopup()">✕</button>
+
+        <div class="menu-header">Chi Tiết Món Ăn</div>
+
+        <div class="menu-content">
+
+            <!-- LEFT -->
+            <div class="left-col">
+                <div class="dish-name">Gà nướng sa tế
+                </div>
+
+                <div class="image-slider">
+                    <button class="arrow left" onclick="prevImage()">❮</button>
+
+                    <img id="dishImage" src="../../img/menu-detail/ganuongsate1.jpeg" alt="Món ăn">
+
+                    <button class="arrow right" onclick="nextImage()">❯</button>
+                </div>
+
+
+                <div class="dish-desc">
+                    Gà nướng sa tế là món ăn hấp dẫn với lớp da vàng óng, thơm lừng mùi sả ớt đặc trưng. Thịt gà được
+                    ướp đậm đà với sa tế cay cay, hòa quyện cùng tỏi, hành, mật ong và gia vị, khi nướng lên trở nên mềm
+                    juicy bên trong, bên ngoài hơi cháy cạnh đầy kích thích.
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="menu-info">
+
+                <label>Lựa chọn thêm:</label>
+                <div>
+                    <input type="radio" name="option" value="0" data-name="Nửa con" checked> Nửa con <br>
+                    <input type="radio" name="option" value="180000" data-name="Nguyên con (+180k)"> Nguyên con
+                    (+180k)<br>
+                </div>
+
+                <label>Ghi chú:</label>
+                <textarea id="noteInput" placeholder="Thêm yêu cầu..."></textarea>
+
+                <label>Thành tiền:
+                    <span id="totalPrice" style="color:white;">180.000đ</span>
+                </label>
+
+                <div class="menu-actions">
+                    <button class="btn-add1" onclick="addToCart(
+                                            'Gà nướng sa tế',
+                                            currentTotalPrice,
+                                            currentOptionName,
+                                            document.getElementById('noteInput')?.value || '',
+                                            '../../img/menu-detail/ganuongsate1.jpeg'
+                                        )">Thêm vào giỏ
+                    </button>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="dialogue-popup" id="dialoguePopup">
+        <img src="../../img/menu-detail/tusena.jpg" class="dialogue-avatar">
+        <div class="dialogue-name">Staff Hiếu</div>
+        <div class="dialogue-text" id="dialogueText"></div>
+        <div class="dialogue-choices" id="dialogueChoices"></div>
+    </div>
+
+</div>
+<div class="toast" id="toast"></div>
+</body>
+</html>

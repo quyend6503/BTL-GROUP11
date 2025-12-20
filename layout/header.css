@@ -1,171 +1,242 @@
-.header,
-.header * {
+/* =========================================
+   RESET & GLOBAL SETTINGS
+========================================= */
+.header, .header * {
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-    .header {
-      top: 0;
-      justify-content: space-between;
-      padding: 0 20px;
-      box-sizing: border-box;
-      background: #000;
-      width: 100%;
-      height: 80px;
-      color: white;
-      z-index: 100;
-      display: flex;
-      font-size: 20px;
-      line-height: normal;
-      gap: 40px;
-      
-    }
 
-    .header a {
-      color: #fff;
-  text-decoration: none;
-    align-items: center;
+/* =========================================
+   HEADER MAIN LAYOUT
+========================================= */
+.header {
+  position: sticky; /* Dính thanh menu trên cùng */
+  top: 0;
+  
+  display: flex;
+  justify-content: space-between; /* Logo trái - Menu giữa - Search phải */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  
+  width: 100%;
+  height: 80px;
+  padding: 0 30px;
+  background: #000;
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
 
-    }
-
-    .logo img {
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .nav {
-      display: flex;
-      gap: 30px;
-      flex-grow: 1;
-      justify-content: center;
-       height: 100%;
+/* --- LOGO --- */
+.header .logo {
+  height: 100%;
+  display: flex;
   align-items: center;
-  gap: 30px;
+  
+  /* QUAN TRỌNG: Đè style cũ và co gọn lại */
+  width: auto !important; /* Dùng !important để ép buộc nếu bị dính code lạ */
+  max-width: fit-content; /* Đảm bảo khung chỉ to bằng nội dung bên trong */
+  padding: 0;             /* Xóa khoảng đệm nếu có */
+}
 
-    }
+.header .logo img {
+  height: 60px; 
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
 
-    .nav a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2px 4px;
-    }
+/* --- NAVIGATION (DESKTOP) --- */
+.nav {
+  display: flex;
+  gap: 50px; /* Khoảng cách giữa các chữ */
+  height: 100%;
+  align-items: center;
+  left: 47%;                /* Đẩy sang 50% màn hình */
+  transform: translateX(-50%); /* Kéo ngược lại 50% chiều rộng của chính nó để vào giữa tâm */
+  display: flex; 
+  position: static;      
+  transform: none;       
+}
 
-    .nav a span {
-      position: relative;
-      padding: 2px 4px;
-      text-decoration: none;
-      color: white;
-      display: inline-block;
-      align-items: center;
-      transition: transform 0.2s;
-      font-size: 20px;
+
+.nav a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.nav a span {
+  padding: 5px 0;
+  color: white;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 1;
   white-space: nowrap;
-    }
+  transition: color 0.3s, transform 0.2s;
+}
 
-    .nav a span:hover {
-      color: #efb022;
-      transform: scale(1.1);
-    }
+/* Hiệu ứng Hover Desktop */
+.nav a span:hover {
+  color: #efb022;
+  transform: scale(1.1);
+}
 
-    .nav a span::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      height: 2px;
-      width: 0;
-      background-color: #efb022;
-      transition: width 0.3s;
-    }
+/* Gạch chân màu vàng khi hover */
+.nav a span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #efb022;
+  transition: width 0.3s ease-in-out;
+}
 
-    .nav a span:hover::after {
-      width: 100%;
-    }
+.nav a span:hover::after {
+  width: 100%;
+}
 
-    .search-area {
-        display: flex;
+/* --- SEARCH AREA & BUTTONS --- */
+.search-area {
+  display: flex;
   align-items: center;
   gap: 10px;
-  height: 80px;
-    }
-
-    .search-area input {
-  height: 36px;
-  padding: 0 12px;
-  border-radius: 6px;
-  border: 1px solid #999;
-  background: #fff;
-  color: #000;
-  font-size: 15px;
-  line-height: 36px;
 }
 
-
-    .header .search-area input {
+.search-area input {
+  height: 36px;
+  width: 200px;
+  padding: 0 15px;
+  border-radius: 20px;
+  border: 1px solid #555;
   background: #fff;
   color: #000;
-  border: 1px solid #999;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s;
+  /* SỬA: Giảm từ 200px xuống 140px (hoặc nhỏ hơn tùy ý) */
+  width: 140px; 
+  
+  /* Giảm padding một chút để có thêm chỗ viết chữ */
+  padding: 0 10px;
 }
 
+.search-area input:focus {
+  border-color: #efb022;
+}
 
-    .lang-btn {
+.lang-btn {
   height: 36px;
-  padding: 0 14px;
-  background: #a67c52;
+  padding: 0 15px;
+  background: linear-gradient(135deg, #a67c52, #8e623a);
   color: white;
   border: none;
-  border-radius: 6px;
-  font-size: 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 36px; /* ÉP CHỮ GIỮA */
+  white-space: nowrap;
 }
 
+/* --- HAMBURGER ICON --- */
+.hamburger {
+  display: none; /* Ẩn trên máy tính */
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1100;
+  padding: 5px;
+}
 
-    .hamburger {
-      display: none;
-      font-size: 28px;
-      color: white;
-      cursor: pointer;
-    }
+/* =========================================
+   RESPONSIVE (TABLET & MOBILE)
+========================================= */
+
+/* Tablet (Màn hình trung bình) */
+@media (max-width: 1024px) {
+  .nav {
+    gap: 15px;
+  }
+  .search-area input {
+    width: 140px;
+  }
+}
+
+/* Mobile (Dưới 768px) */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .hamburger {
+    display: block; /* Hiện nút menu */
+  }
+
+  /* Ẩn thanh tìm kiếm trên mobile để tránh vỡ giao diện */
+  .search-area {
+    display: none;
+  }
+}
+  /* --- MENU MOBILE DẠNG TRƯỢT --- */
+  @media (max-width: 768px) {
+
+  /* Menu Mobile dạng trượt */
+  .nav {
+    position: fixed; /* Ghi đè absolute của PC */
+    top: 80px;
+    right: -100%;
+    left: auto;      /* RESET: Trả lại auto để không bị dính left: 50% */
+    transform: none; 
+  
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: #ffffff;
     
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 40px;
+    gap: 0;
+    
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: right 0.4s ease-in-out;
+    z-index: 999;
+  }
 
-    @media (max-width: 768px) {
-      .nav {
-        flex-direction: column;
-        background: rgb(248, 247, 247);
-        padding: 0;
-        position: absolute;
-        right: -250px;
-        width: 30%;
-        box-shadow: 0 4px 10px rgba(252, 252, 252, 0.2);
-        z-index: 150;
-      }
+  /* Class này sẽ được JS thêm vào để hiện menu */
+  .nav.active {
+    right: 0;
+  }
 
-      .nav.active {
-        display: flex;
-        right: 0;
-      }
+  .nav a {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    justify-content: center; /* Căn chữ ra giữa */
+    border-bottom: 1px solid #eee; /* Đường kẻ mờ ngăn cách */
+  }
 
-      .nav a {
-        padding: 15px 20px;
-        color: black;
-        text-decoration: none;
-        text-align: left;
-        padding: 2px 0;
-      }
+  .nav a span {
+    color: #333; /* Chữ màu đen cho nổi bật trên nền trắng */
+    font-size: 18px;
+    font-weight: 600;
+    width: auto;
+    text-align: center;
+  }
 
+  /* Tắt hiệu ứng gạch chân của desktop */
+  .nav a span::after {
+    display: none;
+  }
 
-      .hamburger {
-        display: flex;
-        font-size: 28px;
-        cursor: pointer;
-        color: white;
-        z-index: 200;
-        right: 0;
-      }
-    }
+  /* Hover trên mobile đơn giản hơn */
+  .nav a span:hover {
+    color: #efb022;
+    transform: none;
+  }
+}

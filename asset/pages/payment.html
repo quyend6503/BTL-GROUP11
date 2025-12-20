@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thanh toán</title>
+
+  <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Pinyon+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Story+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@303456789&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="../../img/LOGO.png">
+<!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/payment.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../../layout/footer.css">
+    <link rel="stylesheet" href="../../layout/header.css">  
+    <script src="/layout/layout.js"></script>
+</head>
+<body>
+    <a href="javascript:history.back()" class="back-btn">Quay Lại </a>
+<main class="container">
+  <div class="checkout-header">
+      <div class="sub-label">Cổng thanh toán</div>
+      <h1 class="main-title">THANH TOÁN</h1>
+      <div class="gold-line"></div>
+      <p class="sub-quote">"Cảm ơn quý khách"</p>
+  </div>
+
+  <div class="grid">
+    <!-- LEFT -->
+    <section>
+      <h2>Thông tin thanh toán</h2>
+      <div class="form-grid">
+          <input type="text" id="fullname" placeholder="Họ tên">
+          <input type="text" id="phone" placeholder="Số điện thoại">
+          <input type="email" id="email" class="full" placeholder="Email">
+          <input type="text" id="address" class="full" placeholder="Địa chỉ">
+      </div>
+
+    <h2 style="margin-top:32px">Phương thức thanh toán</h2>
+    <div class="payment-method">
+        <label class="pay-card">
+            <input type="radio" name="payment" id="method-banking" value="banking" checked>
+            <div class="pay-inner">
+                <div class="pay-left">
+                    <span class="radio-dot"></span>
+                    <div class="pay-text">
+                        <h4>CHUYỂN KHOẢN</h4>
+                        <p> QR Code</p>
+                    </div>
+                </div>
+                <i class="fa-regular fa-credit-card pay-icon"></i>
+            </div>
+        </label>
+
+        <label class="pay-card">
+            <input type="radio" name="payment" id="method-cod" value="cod">
+            <div class="pay-inner">
+                <div class="pay-left">
+                    <span class="radio-dot"></span>
+                    <div class="pay-text">
+                        <h4>TIỀN MẶT (COD)</h4>
+                        <p>Tiền mặt</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-truck pay-icon"></i>
+            </div>
+        </label>
+
+        <div id="qr-section" class="qr-info-box" style="display: none;">
+            <p class="qr-title">Scan QR to Pay</p>
+            
+            <img src="https://img.vietqr.io/image/VCB-123456789-compact2.png" alt="QR Code" class="qr-img">
+            
+            <div class="bank-details">
+                <p>Bank: <strong>Vietcombank</strong></p>
+                <p>Account: <strong>0945843588</strong></p>
+                <p>Name: <strong>THINH VAN QUANG</strong></p>
+                <p class="note">Nội dung chuyển khoản: <strong>Họ tên + Số điện thoại</strong></p>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+    <!-- RIGHT -->
+  <aside class="card">
+      <h2>Chi tiết đơn hàng của bạn</h2>
+          <div id="orderItems"></div>
+          <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0;">
+          <div class="row">
+              <span>Tạm tính</span>
+              <span id="subtotal"></span>
+          </div>
+          <div class="row">
+              <span>Phí ship</span>
+              <span id="shipping">30.000đ</span>
+          </div>
+          <div class="discount-wrapper" style="margin-top: 15px; margin-bottom: 10px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A8A8A8" stroke-width="2">
+                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                  <line x1="7" y1="7" x2="7.01" y2="7"></line>
+              </svg>
+              <input type="text" id="couponCode" placeholder="Nhập mã giảm giá (VD: BABO10)">
+              <button id="applyBtn">Áp dụng</button>
+          </div>
+          <div class="row" id="discountRow" style="display: none; color: #D4AF37; margin-bottom: 15px;">
+              <span>Giảm giá</span>
+              <span id="discountAmount">-</span>
+          </div>
+          <div class="row total" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; margin-top: 5px;">
+              <span>Tổng cộng</span>
+              <span id="total"></span>
+          </div>
+          <button id="payBtn">THANH TOÁN</button>
+  </aside>  
+  </div>
+</main>
+<!-- POPUP BILL -->
+<div id="billOverlay" class="bill-overlay">
+  <div class="bill-popup">
+    <h2>🎉 Đặt hàng thành công</h2>
+
+    <div class="bill-content" id="billContent"></div>
+
+    <div class="bill-actions">
+      <button onclick="javascript:history.back()">Hoàn tất</button>
+  
+    </div>
+  </div>
+</div>
+<script src="../js/payment.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực Đơn</title>
+   
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Pinyon+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Story+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="icon" type="image/jpeg" href="../../img/LOGO.png">
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="/layout/layout.js"></script>
+
+    <script src="..//js/script.js"></script>
+    <script src="../js/dialogue.js"></script>
+
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/thucdon.css">
+    <link rel="stylesheet" href="../../layout/footer.css">
+    <link rel="stylesheet" href="../../layout/header.css">
+    <link rel="stylesheet" href="../css/menu-detail.css">
+    <link rel="stylesheet" href="../css/cart.css">
+
+    <script src="../js/thucdon.js" defer></script>
+    <script src="/layout/layout.js"></script>
+</head>
+<body>
+<!--header-->
+    <div id="header"></div>
+    
+<!-- CART ICON -->
+
+    <div class="cart-icon" onclick="openCartUI()">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
+<div class="menu-page">
+    <section class="banner">
+        <div class="slides">
+            <div class="slide" style="background-image: url('../../img/menu/banner.jpg');"></div>
+            <div class="slide" style="background-image: url('../../img/menu/banner2.jpg');"></div>
+            <div class="slide" style="background-image: url('../../img/menu/banner3.jpg');"></div>
+        </div>
+        <div class="banner-overlay"></div>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <div class = "banner-text">
+                <h1> GÁNH QUÁN </h1>
+        </div>
+    </section>
+    <div class = "banner-title">
+            <h2> THỰC ĐƠN</h2>
+    </div>
+    <div class = "catalog-product-list">
+        <div class= "container">
+            <ul class="breadcrumb d-flex py-1 align-items-center">
+                <li class="breadcrumb-item d-flex align-items-center">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/ewtxwele.json"
+                        trigger="hover"
+                        colors="primary:#ffffff"
+                        style="width:18px;height:18px;margin-right:4px;">
+                    </lord-icon>
+                    <a href="../../index.html">Trang Chủ</a>
+                </li>
+
+                <li class="breadcrumb-item">
+                    <a href="#">Thực Đơn</a>
+                </li>
+            </ul>
+            <div class ="content-product">
+                <div class = "row">
+                    <div class = "col-3">     <!-- col -3 chia từ 12 cột thành 3 cột -->
+                        <div class="catalog-list">
+                            <ul class="menu">
+                                <li class="menu-item parent" data-type="all">
+                                    <span class="menu-title"onclick="loadPage('../menu/all.html')">Tất Cả</span>
+                                </li>
+                           
+                                <li class="menu-item parent">
+                                    <span class="menu-title">  Món Ăn</span>
+                                    <ul class="submenu">
+                                        <li class="menu-item" onclick="loadPage('../menu/Heo.html')" data-type="heo">Heo</li>
+                                        <li class="menu-item" onclick="loadPage('../menu/Bo.html')" data-type="bo">Bò</li>
+                                        <li class="menu-item" onclick="loadPage('../menu/Ga.html')" data-type="ga">Gà</li>
+                                        <li class="menu-item" onclick="loadPage('../menu/Tom.html')" data-type="tom">Tôm</li>
+                                        <li class="menu-item" onclick="loadPage('../menu/rau.html')" data-type="rau">Rau</li>
+                                        <li class="menu-item" onclick="loadPage('../menu/nam.html')" data-type="nam">Nấm</li>
+                                        <li class="menu-item" onclick="loadPage('../menu/khac.html')" data-type="khac">Khác</li>
+                                    </ul>
+                                </li>
+
+                             
+                                <li class="menu-item parent">
+                                    <span class="menu-title">  Đồ Uống</span>
+                                    <ul class="submenu">
+                                        <li class="menu-item" onclick="loadPage('../menu/nuocloc.html')" data-type="nuoc_loc">Nước lọc</li>
+                                        <li class="menu-item" onclick="loadPage('../menu/nuocngot.html')" data-type="nuoc_ngot">Nước ngọt</li>
+                                        <li class="menu-item" onclick="loadPage('../menu/ruou.html')" data-type="ruou">Rượu</li>
+                                        <li class="menu-item" onclick="loadPage('../menu/sinhto.html')" data-type="sinh_to">Sinh tố</li>
+                                    </ul>
+                                </li>
+
+            
+                                <li class="menu-item parent">
+                                    <span class="menu-title">  Tráng Miệng</span>
+                                    <ul class="submenu">
+                                        <li class="menu-item" onclick="loadPage('../menu/che.html')" data-type="che">Chè</li>
+                                        <li class="menu-item" onclick="loadPage('../menu/kem.html')" data-type="kem">Kem</li>
+                                        <li class="menu-item" onclick="loadPage('../menu/banhngot.html')" data-type="banh_ngot">Bánh ngọt</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class = "col-9">    <!-- col - 9 chia từ 12 cột thành 9 cột -->
+                        <div id="product-list" class="product-container"></div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Overlay -->
+<div class="cartui-overlay" id="cartuiOverlay"></div>
+
+<div class="cartui-wrapper" id="cartuiWrapper">
+    <div class="cartui-header">
+        <h2>Giỏ hàng của bạn</h2>
+        <button class="cartui-close" id="cartuiClose">✕</button>
+    </div>
+
+    <div class="cartui-items" id="cartuiItems"></div>
+    <div class="cartui-summary">
+        <div class="cartui-row">
+            <span>Tạm tính</span>
+            <span id="cartuiSubtotal"></span>
+        </div>
+        <div class="cartui-row total">
+            <strong>Tổng cộng</strong>
+            <strong id="cartuiTotal"></strong>
+        </div>
+
+        <a href ="payment.html" class="cartui-checkout">Thanh toán</a>
+
+        <p class="cartui-continue">hoặc 
+            <a href="#" id="cartuiContinue">Tiếp tục mua sắm →</a>
+        </p>
+    </div>
+</div>
+</div>
+<div id="footer"></div>
+<script src="../js/cart.js"></script>
+</body>
+</html>
