@@ -12,8 +12,8 @@ function loadHTML(id, file) {
 }
 
 // Load header và footer
-loadHTML('header', '../layout/Header.html');
-loadHTML('footer', '../layout/Footer.html');
+loadHTML('header', '../layout/header.html');
+loadHTML('footer', '../layout/footer.html');
 
 
 // ========== SWITCH IMAGE LOGIC ==========

@@ -30,14 +30,14 @@ dots.forEach((dot, i) => {
 document.addEventListener("DOMContentLoaded", () => {
 
   // HEADER
-  fetch("../../layout/Header.html")
+  fetch("../../layout/header.html")
     .then(res => res.text())
     .then(html => {
       document.getElementById("header").innerHTML = html;
     });
 
   // FOOTER
-  fetch("../../layout/Footer.html")
+  fetch("../../layout/footer.html")
     .then(res => res.text())
     .then(html => {
       document.getElementById("footer").innerHTML = html;
