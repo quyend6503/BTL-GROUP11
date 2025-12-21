@@ -66,7 +66,7 @@ Nếu bạn là khách mới, đây chính là những món “nhất định ph
     id: 4,
     title: 'Hậu trường đằng sau lớp bì giòn rụm của món thịt quay giòn bì',
     date: '10/12/2025',
-    image: '../img/img trang chủ/img tin tức/b3.jpg',
+    image: '/img/img trang chủ/img tin tức/b3.jpg',
     content: `
       <p>Để tạo nên món thịt quay giòn bì trứ danh, đội ngũ bếp tại Gánh Quán phải trải qua nhiều công đoạn tỉ mỉ. Thịt heo được chọn từ phần ngon nhất, sơ chế sạch sẽ, ướp gia vị theo công thức riêng.</p>
       <img src="../../img/img trang chủ/img tin tức/b4t1.jpg">
