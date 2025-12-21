@@ -43,6 +43,12 @@
   object-fit: contain;
   display: block;
 }
+.header .logo a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 
 /* --- NAVIGATION (DESKTOP) --- */
 .nav {
@@ -131,6 +137,9 @@
   cursor: pointer;
   white-space: nowrap;
   transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .lang-btn:hover {
