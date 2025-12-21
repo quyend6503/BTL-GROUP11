@@ -201,19 +201,7 @@ payBtn.addEventListener("click", function() {
     Cảm ơn bạn đã ủng hộ Gánh Quán!
     `;
 
-    function showBillPopup(billHTML) {
-            document.getElementById("billContent").innerHTML = billHTML;
-            document.getElementById("billOverlay").style.display = "flex";
-        }
 
-        function closeBill() {
-            document.getElementById("billOverlay").style.display = "none";
-        }
-
-        function finishOrder() {
-            localStorage.removeItem("cartUI");
-            window.location.href = "../../index.html";
-        }
         const billHTML = `
             <p><strong>Khách:</strong> <span>${name}</span></p>
             <p><strong>SĐT:</strong> <span>${phone}</span></p>
@@ -234,3 +222,18 @@ payBtn.addEventListener("click", function() {
         `;
         showBillPopup(billHTML);
 });
+
+function showBillPopup(billHTML) {
+    document.getElementById("billContent").innerHTML = billHTML;
+    document.getElementById("billOverlay").style.display = "flex";
+}
+
+function closeBill() {
+    document.getElementById("billOverlay").style.display = "none";
+}
+
+function finishOrder() {
+    closeBill();
+    localStorage.removeItem("cartUI");
+    window.location.href = "../../index.html";
+}

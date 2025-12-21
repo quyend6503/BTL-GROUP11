@@ -1,304 +1,603 @@
-
 .menu-page {
+
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
   background-color: #111;
+
  
+
 }
+
+
 
 body::-webkit-scrollbar { display: none; } /* Ẩn thanh cuộn ngang trên trình duyệt Webkit (Chrome, Safari) */
 
 
+
+
+
 .menu-item {
+
     cursor: pointer;
+
 }
+
 /* Banner container */
+
 .banner {
+
   position: relative;
+
   height: 550px;
+
   overflow: hidden;
+
 }
+
+
 
 /* Slides container */
+
 .slides {
+
   display: flex;
+
   height: 100%;
+
   transition: transform 1s ease-in-out;
+
 }
+
+
 
 /* Mỗi ảnh */
+
 /* Ảnh */
+
 .slide {
+
   flex: 0 0 100%;
+
   height: 100%;
+
   background-size: cover;        /* ảnh tràn viền đúng chuẩn */
+
   background-position: center;   /* luôn căn giữa */
+
   background-repeat: no-repeat;  /* không lặp */
+
 }
 
+
+
 .banner-overlay {
+
   position: absolute;
+
   top: 0;
+
   left: 0;
+
   width: 100%;
+
   height: 100%;
+
   background: rgba(0, 0, 0, 0.35); /* chỉnh độ mờ tại đây */
+
   z-index: 1;
+
    /* Giúp click xuyên qua background */
+
   pointer-events: none;
+
 }
+
+
+
 
 
 /* Dots */
+
 .dots {
+
   position: absolute;
+
   bottom: 20px;
+
   left: 50%;
+
   transform: translateX(-50%);
+
   display: flex;
+
   gap: 10px;
+
 }
+
+
 
 .dot {
+
   width: 12px;
+
   height: 12px;
+
   background-color: rgba(255,255,255,0.6);
+
   border-radius: 50%;
+
   cursor: pointer;
+
   transition: background-color 0.3s;
+
 }
+
+
 
 .dot.active {
+
   background-color: #b14c24;
-}
-/* Text trên banner */
-.banner-title {
-  text-align: center;
-  margin-top: 80px; /* khoảng cách so với banner */
-  font-size: 50px;
-  font-weight: bold;
-  color: #eeae18;
-  font-family: 'pacifico', cursive;
+
 }
 
-.banner-text h1{ 
-  position: absolute;
-  z-index: 5;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px 50px;
-  font-family: 'Pacifico', cursive;
-  color: white;
-  font-size: 70px;
-  font-weight: bold;
+/* Text trên banner */
+
+.banner-title {
+
   text-align: center;
-  text-shadow: 
-      0 0 10px rgba(0,0,0,0.8),
-      0 0 20px rgba(0,0,0,0.6),
-      0 4px 8px rgba(0,0,0,0.8);
-}
-/* Breadcrumb */
-.breadcrumb a{
-  text-decoration: none;
-  color : rgb(255, 255, 255);
-}
-.breadcrumb a:hover{
-  color: #ff8800;
+
+  margin-top: 80px; /* khoảng cách so với banner */
+
+  font-size: 50px;
+
   font-weight: bold;
-  transition: color 0.25s ease;
+
+  color: #eeae18;
+
+  font-family: 'pacifico', cursive;
+
 }
+
+
+
+.banner-text h1{
+
+  position: absolute;
+
+  z-index: 5;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  padding: 20px 50px;
+
+  font-family: 'Pacifico', cursive;
+
+  color: white;
+
+  font-size: 70px;
+
+  font-weight: bold;
+
+  text-align: center;
+
+  text-shadow:
+
+      0 0 10px rgba(0,0,0,0.8),
+
+      0 0 20px rgba(0,0,0,0.6),
+
+      0 4px 8px rgba(0,0,0,0.8);
+
+}
+
+/* Breadcrumb */
+
+.breadcrumb a{
+
+  text-decoration: none;
+
+  color : rgb(255, 255, 255);
+
+}
+
+.breadcrumb a:hover{
+
+  color: #ff8800;
+
+  font-weight: bold;
+
+  transition: color 0.25s ease;
+
+}
+
+
 
 .breadcrumb-item + .breadcrumb-item::before {
+
     content: "›"  !important;
+
     color: #ffffff !important;
+
 }
+
+
 
 .col-3 {
+
     /* Thay #f0f0f0 bằng mã màu bạn thích */
-    background-color: #111; 
-    
+
+    background-color: #111;
+
+   
+
     /* Mẹo: Nên thêm padding để chữ không dính sát vào viền nền */
-    padding: 15px; 
+
+    padding: 15px;
+
 }
+
 /* --- KHUNG MENU CHÍNH --- */
+
 .catalog-list {
+
     /* THU NHỎ LẠI */
-    width: 240px; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+
+    width: 240px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
+
+
 
 /* Reset danh sách */
+
 .menu, .submenu {
+
     list-style: none;
+
     padding: 0;
+
     margin: 0;
+
 }
+
+
 
 /* --- ITEM MENU CẤP 1 (CHA) --- */
+
 .menu-item {
+
     font-size: 18px; /* Giữ nguyên cỡ chữ */
+
     font-weight: 600;
+
     color: #fff;
+
     cursor: pointer;
+
     margin-bottom: 5px;
+
 }
+
+
 
 .menu-item.parent {
+
     position: relative;
+
     padding-bottom: 5px;
+
     margin-bottom: 12px;
+
 }
+
+
 
 /* ĐƯỜNG KẺ SANG TRỌNG (Gradient mờ dần) */
+
 .menu-item.parent::after {
+
     content: "";
+
     display: block;
-    width: 100%;       
-    height: 1px;       
+
+    width: 100%;      
+
+    height: 1px;      
+
     /* Gradient từ trong suốt -> trắng -> trong suốt (nhìn rất mượt) */
+
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
-    margin-top: 8px;   
+
+    margin-top: 8px;  
+
     opacity: 0.6;
+
     transition: all 0.4s ease;
+
 }
+
+
 
 .menu-item.parent:hover::after {
+
     opacity: 1;
+
     background: linear-gradient(90deg, transparent, #f7d772, transparent); /* Đổi màu khi hover */
+
 }
+
+
 
 /* --- TITLE & MŨI TÊN (CĂN CHỈNH) --- */
+
 .menu-title {
+
     display: flex;
+
     justify-content: space-between; /* Đẩy chữ và mũi tên ra 2 đầu */
+
     align-items: center;
+
     width: 100%;
-    
+
+   
+
     padding: 10px 12px; /* Thêm padding để tạo độ thoáng */
+
     border-radius: 8px; /* Bo góc nhẹ */
+
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Chuyển động mượt */
-    
+
+   
+
     /* Box-sizing để padding không làm vỡ khung */
-    box-sizing: border-box; 
+
+    box-sizing: border-box;
+
 }
+
+
 
 /* HIỆU ỨNG HOVER SANG TRỌNG */
+
 .menu-title:hover {
+
     color: #f7d772;
+
     background: rgba(255, 255, 255, 0.08); /* Nền kính mờ nhẹ */
+
     padding-left: 18px; /* Trượt nhẹ sang phải */
+
     box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Bóng đổ nhẹ */
+
 }
+
+
 
 /* MŨI TÊN */
+
 .parent > .menu-title::after {
+
     content: "›";
+
     font-size: 22px;
+
     line-height: 1;
+
     font-weight: 400;
+
     transition: transform 0.4s ease;
-    margin-left: 10px; 
+
+    margin-left: 10px;
+
 }
+
+
 
 /* Xoay mũi tên */
+
 .parent.open > .menu-title::after {
+
     transform: rotate(90deg);
+
     color: #f7d772;
+
 }
+
+
 
 /* Ẩn mũi tên cho mục 'Tất cả' */
+
 .parent[data-type="all"] > .menu-title::after {
+
     display: none;
+
 }
+
+
 
 /* --- SUBMENU (MENU CON) --- */
+
 .submenu {
+
     display: none;
+
     /* Tạo đường dẫn hướng bên trái */
+
     border-left: 1px solid rgba(255,255,255,0.1);
+
     margin-left: 20px; /* Thụt vào so với menu cha */
+
     padding-left: 5px;
+
     animation: slideDown 0.3s ease forwards;
+
 }
+
+
 
 /* Hiệu ứng trượt xuống */
+
 @keyframes slideDown {
+
     from { opacity: 0; transform: translateY(-5px); }
+
     to { opacity: 1; transform: translateY(0); }
+
 }
+
+
 
 .parent.open > .submenu {
+
     display: block;
+
 }
+
+
 
 /* Style từng món con */
+
 .submenu .menu-item {
+
     font-size: 16px; /* Giữ nguyên cỡ chữ con */
+
     font-weight: 400;
+
     padding: 8px 15px;
+
     margin-bottom: 2px;
+
     border-radius: 6px;
+
     color: rgba(255, 255, 255, 0.7); /* Màu trắng mờ */
+
     transition: all 0.2s;
+
     position: relative;
+
     overflow: hidden;
+
 }
+
+
 
 /* Hover menu con: Hiệu ứng sáng đèn */
+
 .submenu .menu-item:hover {
+
     color: #fff;
+
     background: linear-gradient(90deg, rgba(255, 136, 0, 0.2), transparent); /* Vệt sáng cam */
+
     padding-left: 20px;
+
     font-weight: 500;
+
 }
 
+
+
 /* Dấu gạch nhỏ bên trái khi hover menu con (Tuỳ chọn thêm cho đẹp) */
+
 .submenu .menu-item:hover::before {
+
     content: "";
+
     position: absolute;
+
     left: 0;
+
     top: 50%;
+
     transform: translateY(-50%);
+
     width: 3px;
+
     height: 60%;
+
     background: #f7d772;
+
     border-radius: 2px;
+
 }
+
+
 
 /* ==== PRODUCT GRID ==== */
 
+
+
 /* ================================
+
    RESPONSIVE MENU – MOBILE/TABLET
+
    ================================ */
+
 @media (max-width: 992px) {      /* Tablet + Mobile */
 
+
+
     .catalog-list {
+
         width: 100%;            /* Menu chiếm hết chiều ngang */
+
         max-width: 350px;       /* Giới hạn menu để không quá rộng */
+
         margin: 0 auto;         /* Căn GIỮA menu */
+
     }
 
-    .col-3 { 
+
+
+    .col-3 {
+
         width: 100% !important; /* Cột menu full width */
+
         display: flex;
+
         justify-content: center; /* Đưa menu ra giữa */
+
         margin-bottom: 20px;
+
     }
+
+
 
     .col-9 {
-        width: 100% !important; 
+
+        width: 100% !important;
+
     }
 
+
+
     .product-container {
+
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
+
         /* Sản phẩm tự chia nhỏ khi về mobile */
+
     }
+
 }
+
+
 
 @media (max-width: 576px) {      
 
     .product-container {
-        grid-template-columns: 1fr !important; 
-        /* Mỗi hàng 1 món để đẹp hơn */
+
+        grid-template-columns: 1fr !important;
+
+  
+
     }
+
 }

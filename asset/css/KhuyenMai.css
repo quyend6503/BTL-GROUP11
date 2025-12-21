@@ -294,254 +294,131 @@ HỘP QUÀ BÍ ẨN
 /* =====================
 RESPONSIVE
 ===================== */
-
-/* Mobile devices (max-width: 480px) */
-@media (max-width: 480px) {
-    .header {
-        padding: 16px 20px;
-    }
-
-    .header h1 {
-        padding: 10px 20px;
-        font-size: 22px;
-    }
-
+/* Tablet (Dưới 1024px) */
+@media (max-width: 1024px) {
     .page {
-        margin: 20px auto;
-        padding: 0 10px;
+        max-width: 95%;
+        max-width: 1100px;
+    /* margin: 20px 40px;  <-- Cách cũ dễ gây lệch nếu màn hình nhỏ hơn 1100px */
+    
+    margin: 40px 3;    /* Căn giữa tự động: trên dưới 40px, trái phải tự chia đều */
+    padding: 0 40px;      /* Giữ lề trái/phải luôn cách mép ít nhất 40px */
+    box-sizing: border-box;
     }
-
-    .page-title {
-        font-size: 28px;
-    }
-
+    
     .title-line {
-        width: 100%;
-        margin-bottom: 20px;
+        width: 80%;
     }
 
-    /* Deal item */
+    .deal-item {
+        height: 350px; /* Giảm chiều cao một chút */
+    }
+
+    .deal-image {
+        width: 40%;
+    }
+
+    .deal-content {
+        width: 60%;
+        font-size: 18px;
+    }
+}
+
+/* Mobile ngang & Tablet nhỏ (Dưới 768px) */
 @media (max-width: 768px) {
-    .deal-image img {
-        height: 200px;
+    .page{
+    margin: 40px 3;    /* Căn giữa tự động: trên dưới 40px, trái phải tự chia đều */
+    padding: 0 40px; 
     }
-}
-
-@media (max-width: 480px) {
-    .deal-image img {
-        max-height: 200px;
-    }
-}
-
-    /* Secret boxes */
-    .secret-box {
-        width: 100%;
-        height: 200px;
-    }
-
-    .box-img {
-        width: 100%;
-        height: auto;
-    }
-
-    .copy-btn {
-        font-size: 24px;
-        padding: 4px 8px;
-        margin-bottom: 30px;
-    }
-
-    /* Dealsship grid */
-    #dealsship {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .uudai-image img {
-        height: 150px;
-    }
-
-    .cheers-wrap {
-        width: 150px;
-        height: 350px;
-        margin: 30px auto;
-    }
-
-    .glass-png {
-        width: 300px;
-    }
-
-    .cheers-text i {
-        font-size: 40px;
-    }
-}
-
-/* Tablet devices (481px - 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-    .header {
-        padding: 20px 40px;
-    }
-
-    .header h1 {
-        padding: 15px 40px;
-        font-size: 24px;
-    }
-
-    .page {
-        margin: 30px auto;
-        padding: 0 15px;
-    }
-
     .page-title {
         font-size: 32px;
     }
 
-    .title-line {
-        width: 90%;
-    }
-
-    /* Deal item */
+    /* Chuyển Deal item sang dạng dọc để không bị nén chữ */
     .deal-item {
         flex-direction: column;
-        height: auto;
+        height: auto; /* Để chiều cao tự động theo nội dung */
+        border-radius: 20px;
     }
 
-    .deal-image,
-    .deal-content {
+    .deal-image, .deal-content {
         width: 100%;
     }
 
-    .deal-content {
-        padding: 20px;
-        font-size: 20px;
-    }
-
-    .deal-content ul {
-        padding-left: 1cm;
-        font-size: 15px;
-    }
-
-    /* Dealsship grid */
-    #dealsship {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
-    .uudai-image img {
-        height: 160px;
-    }
-
-    .secret-box {
-        width: 45%;
+    .deal-image img {
         height: 250px;
     }
 
-    .box-img {
-        width: 100%;
-        height: 100%;
+    .deal-content {
+        margin: 10px 0;
+        padding: 20px;
     }
 
-    .copy-btn {
-        font-size: 28px;
-        padding: 5px 10px;
-        margin-bottom: 40px;
+    /* Grid ship chuyển thành 2 cột */
+    #dealsship {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
-    /* Cheers */
-    .cheers-wrap {
-        width: 180px;
-        height: 400px;
-    }
-
+    /* Điều chỉnh ly rượu */
     .glass-png {
-        width: 400px;
+        width: 300px;
     }
-
-    .cheers-text i {
-        font-size: 50px;
-    }
+    .glass-png.left { left: -150px; }
+    .glass-png.right { right: -150px; }
 }
 
-/* Large screens (769px - 1100px) */
-@media (min-width: 769px) and (max-width: 1100px) {
-    .header {
-        padding: 24px 50px;
-    }
-
-    .header h1 {
-        padding: 20px 50px;
+/* Điện thoại di động (Dưới 480px) */
+@media (max-width: 480px) {
+    .page-title {
         font-size: 24px;
     }
 
-    .page {
-        margin: 30px auto;
-        padding: 0 15px;
-    }
-
-    .page-title {
-        font-size: 36px;
-    }
-
     .title-line {
-        width: 95%;
+        width: 100%;
+        height: 2px;
     }
 
-    .deal-item {
-        flex-direction: row;
-        height: 350px;
-    }
-
-    .deal-image {
-        width: 50%;
-    }
-
+    /* Deal content */
     .deal-content {
-        width: 50%;
-        padding: 20px;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .deal-content ul {
-        padding-left: 1cm;
-        font-size: 15px;
+        padding-left: 20px; /* Thay vì 1cm để tiết kiệm không gian */
     }
 
-    /* Dealsship grid */
+    /* Grid ship chuyển thành 1 cột */
     #dealsship {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
+        grid-template-columns: 1fr;
     }
 
-    .uudai-image img {
-        height: 180px;
+    /* Hộp quà bí ẩn */
+    .secret-box, .box-img {
+        width: 150px; /* Thu nhỏ hộp quà trên mobile */
+        height: 150px;
     }
 
-    .secret-box {
-        width: 300px;
-        height: 300px;
-    }
-
-    .box-img {
-        width: 100%;
-        height: 100%;
+    .box {
+        margin-bottom: 100px;
     }
 
     .copy-btn {
-        font-size: 30px;
-        padding: 5px 10px;
-        margin-bottom: 50px;
+        font-size: 20px;
+        padding: 8px 15px;
     }
 
-    /* Cheers */
+    /* Ly rượu Noel */
     .cheers-wrap {
-        width: 200px;
-        height: 500px;
+        height: 300px;
     }
-
     .glass-png {
-        width: 500px;
+        width: 200px;
     }
-
+    .glass-png.left { left: -80px; }
+    .glass-png.right { right: -80px; }
+    
     .cheers-text i {
-        font-size: 60px;
+        font-size: 30px;
     }
 }

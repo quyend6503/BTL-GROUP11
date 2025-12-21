@@ -147,3 +147,91 @@ body::-webkit-scrollbar {
   color: #fff;
   transform: translateX(-4px);
 }        
+
+/* =================================================================
+   2. RESPONSIVE (MỚI THÊM)
+   ================================================================= */
+
+/* --- Tablet (Máy tính bảng) --- */
+@media (max-width: 992px) {
+    .container {
+        padding: 30px 15px;
+        margin-top: 40px;
+        max-width: 100%; /* Bung hết chiều ngang */
+    }
+
+    h2 {
+        font-size: 36px; /* Giảm cỡ chữ tiêu đề */
+    }
+
+    .card {
+        padding: 25px; /* Giảm padding trong card */
+    }
+}
+
+/* --- Mobile (Điện thoại) --- */
+@media (max-width: 768px) {
+    /* Điều chỉnh container */
+    .container {
+        padding: 20px 15px;
+        margin-top: 50px; /* Đẩy xuống để tránh đè nút Back */
+    }
+
+    /* Tiêu đề nhỏ lại cho vừa màn hình */
+    h2 {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+
+    .sub {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+    /* Card */
+    .card {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    /* Grid Layout trên mobile: 1 cột (đã set mặc định ở trên, nhưng đảm bảo lại) */
+    .row {
+        grid-template-columns: 1fr; 
+        gap: 15px; /* Giảm khoảng cách giữa các input */
+    }
+
+    /* Input & Button */
+    .booking-page input {
+        height: 48px; /* Nhỏ hơn xíu cho gọn */
+        font-size: 15px;
+    }
+
+    .booking-page button {
+        height: 50px;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    
+    label {
+        font-size: 14px; /* Chữ label nhỏ lại */
+    }
+
+    /* Nút Back nhỏ gọn hơn */
+    .back-btn {
+        top: 15px;
+        left: 15px;
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+/* --- Mobile Rất nhỏ (iPhone SE, Galaxy Fold...) --- */
+@media (max-width: 380px) {
+    h2 {
+        font-size: 24px;
+    }
+    
+    .booking-page input {
+        font-size: 14px;
+    }
+}

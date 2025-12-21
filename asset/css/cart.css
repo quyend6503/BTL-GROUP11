@@ -237,3 +237,95 @@
     min-width: 20px;
     text-align: center;
 }
+
+/* =============================================
+   RESPONSIVE (ĐIỆN THOẠI & MÁY TÍNH BẢNG)
+============================================= */
+
+@media (max-width: 768px) {
+
+    /* 1. KHUNG GIỎ HÀNG (WRAPPER) */
+    /* Trên điện thoại, giỏ hàng nên chiếm toàn màn hình để dễ thao tác */
+    .cartui-wrapper {
+        width: 100%;       /* Rộng full màn hình */
+        right: -100%;      /* Giấu hẳn sang phải */
+        padding: 15px;     /* Giảm padding chút cho thoáng */
+    }
+
+    /* Khi mở thì trượt ra full màn hình */
+    .cartui-wrapper.open {
+        right: 0;
+    }
+
+    /* 2. NÚT ICON GIỎ HÀNG TRÔI NỔI */
+    /* QUAN TRỌNG: Đổi từ vị trí 'top' sang 'bottom' để không bị mất icon trên màn hình ngắn */
+    .cart-icon {
+        top: auto !important;    /* Hủy vị trí top cũ */
+        bottom: 20px;            /* Cách đáy 20px (dễ bấm bằng ngón cái) */
+        right: 20px;             /* Cách phải 20px */
+        width: 50px;             /* Thu nhỏ nhẹ */
+        height: 50px;
+    }
+
+    .cart-icon i {
+        font-size: 20px;
+    }
+
+    /* 3. ITEM GIỎ HÀNG */
+    /* Thu nhỏ ảnh món ăn lại chút để chừa chỗ cho tên món */
+    .cartui-item img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .cartui-item {
+        gap: 10px; /* Giảm khoảng cách giữa ảnh và chữ */
+    }
+
+    /* 4. CHỮ VÀ THÔNG TIN */
+    .cartui-header h2 {
+        font-size: 20px; /* Tiêu đề nhỏ lại */
+    }
+
+    .cartui-info h3 {
+        font-size: 15px; /* Tên món nhỏ lại để không bị rớt dòng quá nhiều */
+    }
+
+    .cartui-info .cartui-price,
+    .cartui-info .cartui-option,
+    .cartui-info .cartui-note {
+        font-size: 13px; /* Chữ phụ nhỏ lại */
+    }
+
+    /* 5. NÚT TĂNG GIẢM SỐ LƯỢNG */
+    .cartui-qty {
+        width: 90px;
+        gap: 5px;
+    }
+
+    .cartui-qty button {
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+    }
+
+    /* 6. NÚT XÓA */
+    .cartui-remove {
+        font-size: 14px;
+        width: auto; /* Để nó tự co giãn */
+    }
+
+    /* 7. PHẦN TỔNG TIỀN & THANH TOÁN */
+    .cartui-summary {
+        margin-top: 15px;
+        padding-top: 15px;
+    }
+
+    .cartui-checkout {
+        padding: 14px; /* Tăng vùng bấm cho dễ thao tác cảm ứng */
+        font-size: 16px;
+    }
+}
+
+/* =============================================
+   MÀN HÌNH RẤT

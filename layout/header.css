@@ -1,5 +1,5 @@
 /* =========================================
-   RESET & GLOBAL SETTINGS
+   1. GLOBAL & RESET
 ========================================= */
 .header, .header * {
   box-sizing: border-box;
@@ -7,15 +7,16 @@
 }
 
 /* =========================================
-   HEADER MAIN LAYOUT
+   2. HEADER MAIN LAYOUT
 ========================================= */
 .header {
-  position: sticky; /* Dính thanh menu trên cùng */
+  position: sticky;
   top: 0;
+  left: 0; /* Thêm left: 0 để đảm bảo dính chặt lề trái */
   
   display: flex;
-  justify-content: space-between; /* Logo trái - Menu giữa - Search phải */
-  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: space-between;
+  align-items: center;
   
   width: 100%;
   height: 80px;
@@ -31,11 +32,9 @@
   height: 100%;
   display: flex;
   align-items: center;
-  
-  /* QUAN TRỌNG: Đè style cũ và co gọn lại */
-  width: auto !important; /* Dùng !important để ép buộc nếu bị dính code lạ */
-  max-width: fit-content; /* Đảm bảo khung chỉ to bằng nội dung bên trong */
-  padding: 0;             /* Xóa khoảng đệm nếu có */
+  width: auto !important;
+  max-width: fit-content;
+  padding: 0;
 }
 
 .header .logo img {
@@ -48,16 +47,12 @@
 /* --- NAVIGATION (DESKTOP) --- */
 .nav {
   display: flex;
-  gap: 50px; /* Khoảng cách giữa các chữ */
-  height: 100%;
   align-items: center;
-  left: 47%;                /* Đẩy sang 50% màn hình */
-  transform: translateX(-50%); /* Kéo ngược lại 50% chiều rộng của chính nó để vào giữa tâm */
-  display: flex; 
-  position: static;      
-  transform: none;       
+  height: 100%;
+  gap: 40px; /* Điều chỉnh khoảng cách hợp lý */
+  
+  /* Đã xóa các đoạn code position/transform gây xung đột cũ */
 }
-
 
 .nav a {
   text-decoration: none;
@@ -70,31 +65,32 @@
 .nav a span {
   padding: 5px 0;
   color: white;
-  font-size: 18px;
+  font-size: 16px; /* Giảm nhẹ size chữ để thanh thoát hơn */
   font-weight: 500;
   white-space: nowrap;
-  transition: color 0.3s, transform 0.2s;
+  transition: all 0.3s ease;
+  text-transform: uppercase; /* Làm chữ menu in hoa trông sang hơn */
+  letter-spacing: 0.5px;
 }
 
 /* Hiệu ứng Hover Desktop */
 .nav a span:hover {
   color: #efb022;
-  transform: scale(1.1);
 }
 
-/* Gạch chân màu vàng khi hover */
+/* Gạch chân màu vàng */
 .nav a span::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 25px; /* Căn chỉnh vị trí gạch chân */
   height: 2px;
   width: 0;
   background-color: #efb022;
   transition: width 0.3s ease-in-out;
 }
 
-.nav a span:hover::after {
+.nav a:hover span::after {
   width: 100%;
 }
 
@@ -107,7 +103,7 @@
 
 .search-area input {
   height: 36px;
-  width: 200px;
+  width: 160px; /* Kích thước chuẩn đẹp */
   padding: 0 15px;
   border-radius: 20px;
   border: 1px solid #555;
@@ -115,21 +111,17 @@
   color: #000;
   font-size: 14px;
   outline: none;
-  transition: border 0.3s;
-  /* SỬA: Giảm từ 200px xuống 140px (hoặc nhỏ hơn tùy ý) */
-  width: 140px; 
-  
-  /* Giảm padding một chút để có thêm chỗ viết chữ */
-  padding: 0 10px;
+  transition: border 0.3s, width 0.3s;
 }
 
 .search-area input:focus {
   border-color: #efb022;
+  width: 180px; /* Hiệu ứng nở ra khi click vào */
 }
 
 .lang-btn {
   height: 36px;
-  padding: 0 15px;
+  padding: 0 20px;
   background: linear-gradient(135deg, #a67c52, #8e623a);
   color: white;
   border: none;
@@ -137,106 +129,122 @@
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   white-space: nowrap;
+  transition: transform 0.2s;
 }
 
-/* --- HAMBURGER ICON --- */
+.lang-btn:hover {
+  transform: scale(1.05);
+}
+
+/* --- HAMBURGER ICON (Mặc định ẩn) --- */
 .hamburger {
-  display: none; /* Ẩn trên máy tính */
+  display: none;
   font-size: 28px;
   color: #fff;
   cursor: pointer;
-  z-index: 1100;
   padding: 5px;
 }
 
 /* =========================================
-   RESPONSIVE (TABLET & MOBILE)
+   3. RESPONSIVE (TABLET & MOBILE)
 ========================================= */
 
-/* Tablet (Màn hình trung bình) */
+/* --- TABLET (1024px trở xuống) --- */
 @media (max-width: 1024px) {
-  .nav {
-    gap: 15px;
+  .header {
+    padding: 0 20px;
   }
+  
+  .nav {
+    gap: 20px; /* Thu hẹp khoảng cách menu */
+  }
+  
+  .nav a span {
+    font-size: 15px;
+  }
+
   .search-area input {
+    width: 120px; /* Thu nhỏ ô tìm kiếm để không bị vỡ */
+  }
+  .search-area input:focus {
     width: 140px;
   }
 }
 
-/* Mobile (Dưới 768px) */
+/* --- MOBILE (768px trở xuống) --- */
 @media (max-width: 768px) {
-  .header {
-    padding: 0 20px;
-  }
-
-  .hamburger {
-    display: block; /* Hiện nút menu */
-  }
-
-  /* Ẩn thanh tìm kiếm trên mobile để tránh vỡ giao diện */
-  .search-area {
-    display: none;
-  }
-}
-  /* --- MENU MOBILE DẠNG TRƯỢT --- */
-  @media (max-width: 768px) {
-
-  /* Menu Mobile dạng trượt */
-  .nav {
-    position: fixed; /* Ghi đè absolute của PC */
-    top: 80px;
-    right: -100%;
-    left: auto;      /* RESET: Trả lại auto để không bị dính left: 50% */
-    transform: none; 
   
-    width: 100%;
+  /* Hiện nút Menu */
+  .hamburger {
+    display: block;
+    order: 3; /* Đảm bảo nút hamburger nằm bên phải cùng */
+  }
+
+  /* Ẩn thanh tìm kiếm trên header (để dành chỗ cho logo và menu) */
+  .search-area {
+    display: none; 
+  }
+
+  /* --- MENU MOBILE DẠNG TRƯỢT (SIDEBAR) --- */
+  .nav {
+    position: fixed;
+    top: 80px; /* Nằm ngay dưới header */
+    right: -100%; /* Giấu sang bên phải */
+    left: auto;
+    
+    width: 250px; /* Chiều rộng menu mobile vừa phải, không che hết màn hình */
     height: calc(100vh - 80px);
-    background: #ffffff;
+    background: #1a1a1a; /* Đổi màu nền tối cho đồng bộ với Header */
     
     flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    padding-top: 40px;
+    align-items: flex-start; /* Căn lề trái cho đẹp */
+    justify-content: flex-start;
+    padding: 20px 0;
     gap: 0;
     
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: right 0.4s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1); /* Hiệu ứng trượt mượt */
     z-index: 999;
   }
 
-  /* Class này sẽ được JS thêm vào để hiện menu */
-  .nav.active {
+  /* Class kích hoạt menu (Dùng JS hoặc checkbox hack) */
+  .nav.active, 
+  #menu-toggle:checked ~ .nav {
     right: 0;
   }
 
+  /* Style từng link trong mobile */
   .nav a {
     width: 100%;
     height: auto;
-    padding: 20px 0;
-    justify-content: center; /* Căn chữ ra giữa */
-    border-bottom: 1px solid #eee; /* Đường kẻ mờ ngăn cách */
+    padding: 15px 30px; /* Tạo khoảng bấm rộng rãi */
+    border-bottom: 1px solid #333; /* Đường kẻ mờ ngăn cách */
+    justify-content: flex-start;
   }
 
   .nav a span {
-    color: #333; /* Chữ màu đen cho nổi bật trên nền trắng */
-    font-size: 18px;
-    font-weight: 600;
-    width: auto;
-    text-align: center;
+    color: #fff; 
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: left;
   }
 
-  /* Tắt hiệu ứng gạch chân của desktop */
-  .nav a span::after {
-    display: none;
+  /* Hiệu ứng khi hover trên mobile */
+  .nav a:hover {
+    background-color: #333; /* Sáng hơn nền một chút */
   }
-
-  /* Hover trên mobile đơn giản hơn */
+  
   .nav a span:hover {
     color: #efb022;
-    transform: none;
+    padding-left: 5px; /* Hiệu ứng đẩy chữ nhẹ sang phải */
+  }
+
+  /* Tắt gạch chân vàng của Desktop */
+  .nav a span::after,
+  .nav a:hover span::after {
+    display: none;
   }
 }

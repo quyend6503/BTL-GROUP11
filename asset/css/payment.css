@@ -603,3 +603,107 @@ button:hover {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* ==========================================================================
+   2.  RESPONSIVE NÂNG CAO (Thêm vào đây để tối ưu)
+   ========================================================================== */
+
+/* --- Tablet (Máy tính bảng) --- */
+@media (max-width: 992px) {
+    .container {
+        padding: 30px 15px;
+    }
+    
+    .checkout-header {
+        margin-bottom: 30px;
+    }
+    
+    .main-title {
+        font-size: 50px; /* Thu nhỏ tiêu đề một chút */
+    }
+    
+    .payment-method {
+        max-width: 100%; /* Cho phép ô thanh toán giãn hết chiều ngang cột */
+    }
+}
+
+/* --- Mobile (Điện thoại) - QUAN TRỌNG NHẤT --- */
+@media (max-width: 576px) {
+    /* Điều chỉnh Header */
+    .header {
+        padding: 15px 20px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+
+    /* Thu nhỏ tiêu đề để không bị tràn màn hình */
+    .main-title {
+        font-size: 36px; 
+    }
+    
+    .sub-label {
+        font-size: 11px;
+    }
+    
+    /* Chuyển Form nhập liệu về 1 cột dọc cho dễ điền trên điện thoại */
+    .form-grid {
+        grid-template-columns: 1fr; /* 1 cột */
+        gap: 12px;
+    }
+    
+    .form-grid .full {
+        grid-column: span 1; /* Reset span */
+    }
+
+    /* Tăng kích thước ô input cho dễ bấm */
+    input, button {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    /* Điều chỉnh thẻ thanh toán (Radio card) */
+    .pay-inner {
+        padding: 15px; /* Giảm padding */
+    }
+    
+    .pay-text h4 {
+        font-size: 15px;
+    }
+    
+    .pay-text p {
+        font-size: 13px;
+    }
+
+    /* Điều chỉnh Popup hóa đơn trên Mobile */
+    .bill-popup {
+        width: 95%; /* Gần full màn hình */
+        padding: 20px 15px;
+    }
+
+    .bill-actions {
+        flex-direction: column; /* Nút xếp chồng lên nhau */
+        gap: 10px;
+    }
+    
+    .bill-actions button {
+        width: 100%;
+        padding: 14px; /* Nút to hơn để dễ bấm */
+    }
+
+    /* Nút Back quay lại */
+    .back-btn {
+        top: 15px;
+        left: 15px;
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    /* Ảnh QR code responsive */
+    .qr-img {
+        width: 100%;
+        max-width: 180px; /* Giới hạn tối đa */
+        height: auto;
+    }
+}
