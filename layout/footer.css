@@ -85,7 +85,7 @@ footer {
 }
 .logo a {
     font-size: 17px;
-    color: #efb022;
+    color: white;
     text-decoration: none;
     transition: all 0.3s ease; /* Hiệu ứng mượt mà */
     margin-left: 90px;
