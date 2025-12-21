@@ -1,0 +1,72 @@
+<div class="overlay" id="overlay">
+
+    <div class="menu-popup">
+        <button class="close-btn1" onclick="closePopup()">✕</button>
+
+        <div class="menu-header">Chi Tiết Món Ăn</div>
+
+        <div class="menu-content">
+
+            <!-- LEFT -->
+            <div class="left-col">
+                <div class="dish-name"> Tôm hấp trứng muối
+                </div>
+                <div class="image-slider">
+                    <button class="arrow left" onclick="prevImage()">❮</button>
+
+                    <img id="dishImage" src="../../Menu-detail/images/tomluoc1.jpeg" alt="Món ăn">
+
+                    <button class="arrow right" onclick="nextImage()">❯</button>
+                </div>
+
+
+                <div class="dish-desc">
+Tôm hấp dừa mang hương vị thơm ngọt tự nhiên với từng con tôm đỏ au, căng mọng sau khi hấp. Nước dừa thấm vào thịt tôm tạo độ ngọt dịu, mềm nhưng vẫn giữ được sự dai giòn đặc trưng. Khi thưởng thức, mùi dừa thoang thoảng hòa cùng vị tôm tươi khiến món ăn trở nên thanh nhẹ nhưng vẫn cực kỳ cuốn.
+                </div>
+            </div>
+            <!-- RIGHT -->
+            <div class="menu-info">
+
+                <label>Lựa chọn thêm:</label>
+                <div>
+                    <input type="radio" name="option" value="0"data-name="Tôm sú" checked> Tôm sú <br>
+                    <input type="radio" name="option" value="1000000"data-name="Tôm hùm (+1tr)"> Tôm Hùm (+1tr) <br>
+                </div>
+
+                <label>Ghi chú:</label>
+                <textarea id="noteInput" placeholder="Thêm yêu cầu..."></textarea>
+
+                <label>Thành tiền:
+                    <span id="totalPrice" style="color:white;">260.000đ</span>
+                </label>
+
+                <div class="menu-actions">
+                    <button class="btn-add1" onclick="addToCart(
+        'Tôm hấp dừa',
+        currentTotalPrice,
+        currentOptionName,
+        document.getElementById('noteInput')?.value || '',
+        '../../img/menu-detail/tomluoc1.jpeg'
+    )">Thêm vào giỏ</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="dialogue-popup" id="dialoguePopup">
+        <img src="../../img/menu-detail/tusena.jpg" class="dialogue-avatar">
+        <div class="dialogue-name">Staff Hiếu</div>
+        <div class="dialogue-text" id="dialogueText"></div>
+        <div class="dialogue-choices" id="dialogueChoices"></div>
+    </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+
+</body>
+
+</html>

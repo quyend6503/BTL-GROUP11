@@ -1,0 +1,605 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #121212;
+  color: #EAEAEA;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Cố định nền khi cuộn chuột */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Đẩy lui ra sau cùng, nằm dưới nội dung */
+    background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;  /* Ảnh phủ kín màn hình */
+    background-position: center center; /* Ảnh luôn căn giữa */
+    background-repeat: no-repeat;
+    /* --- HIỆU ỨNG LÀM CHÌM VÀ MỜ --- */
+    /* blur(px): Độ mờ. Số càng lớn càng mờ. */
+    /* brightness(%): Độ sáng. Số nhỏ hơn 1 là làm tối đi. */
+    filter: blur(8px) brightness(0.3) contrast(1.2);
+    transform: scale(1.05);
+    pointer-events: none; /* Không chặn click chuột */
+}
+
+.checkout-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-top: 20px;
+}
+
+/* Chữ nhỏ màu vàng: PAYMENT GATEWAY */
+.sub-label {
+    color: #D4AF37; /* Màu vàng kim */
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px; /* Giãn cách chữ rộng ra */
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* Chữ to: Checkout */
+.main-title {
+    color: #fff;
+    font-family: 'Playfair Display', serif; /* Font có chân sang trọng */
+    font-size: 64px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Đường kẻ gạch ngang nhỏ */
+.gold-line {
+    width: 60px;
+    height: 1px;
+    background-color: #D4AF37;
+    margin: 20px auto; /* Căn giữa */
+    opacity: 0.7;
+}
+
+/* Câu trích dẫn nghiêng */
+.sub-quote {
+    color: #999;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 16px;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 48px;
+    }
+    .sub-quote {
+        font-size: 14px;
+    }
+}
+
+.header {
+  padding: 20px 40px;
+  border-bottom: 1px solid rgba(212,175,55,.3);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #D4AF37;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-grid .full {
+  grid-column: span 2;
+}
+
+input {
+  padding: 12px;
+  background: #1C1C1C;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 8px;
+  color: #EAEAEA;
+}
+
+input:focus {
+  outline: none;
+  border-color: #D4AF37;
+}
+
+.payment-option {
+  margin-top: 12px;
+  padding: 14px;
+  border: 2px solid rgba(255,255,255,.1);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.payment-option.active {
+  border-color: #D4AF37;
+  background: rgba(212,175,55,.15);
+}
+
+.card {
+  background: #1C1C1C;
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.row.total {
+  font-size: 20px;
+  font-weight: 700;
+  color: #D4AF37;
+}
+.card h2{
+    text-align: center;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background: #D4AF37;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e6c45c;
+  
+}
+
+#shipping{
+    color:rgb(24, 239, 24)
+}
+
+.payment-method {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 640px;
+}
+
+/* ẩn radio gốc */
+.pay-card input {
+    display: none;
+}
+
+/* card */
+.pay-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 22px;
+    border-radius: 16px;
+
+    background: #0f0f0f;
+    border: 1.5px solid #222;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* hover */
+.pay-card:hover .pay-inner {
+    border-color: #444;
+    transform: translateY(-2px);
+}
+
+/* khi chọn */
+.pay-card input:checked + .pay-inner {
+    border-color: #f5b800;
+    box-shadow: 
+        0 0 0 1px rgba(245,184,0,0.5),
+        0 0 30px rgba(245,184,0,0.25);
+}
+
+/* left */
+.pay-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* radio custom */
+.radio-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #666;
+    position: relative;
+    transition: 0.25s;
+}
+
+.pay-card input:checked + .pay-inner .radio-dot {
+    border-color: #f5b800;
+}
+
+.pay-card input:checked + .pay-inner .radio-dot::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background: #f5b800;
+    border-radius: 50%;
+}
+
+/* text */
+.pay-text h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.pay-text p {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* icon phải */
+.pay-icon {
+    font-size: 22px;
+    color: #f5b800;
+    opacity: 0.9;
+}
+
+/* 1. Trạng thái bình thường */
+#payBtn {
+  /* Giữ nguyên các thuộc tính cũ của button nếu cần, thêm các dòng dưới đây */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Chuyển động mượt mà */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Bóng đen nhẹ ban đầu */
+  position: relative;
+  overflow: hidden; /* Để xử lý hiệu ứng loang màu nếu cần */
+}
+
+/* 2. Khi di chuột vào (Hover) */
+#payBtn:hover {
+  background: #f0c445; /* Màu vàng sáng hơn một chút để tạo độ nảy */
+  transform: translateY(-3px); /* Nút bay lên nhẹ 3px */
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4); /* Đổ bóng màu Vàng Gold tạo cảm giác phát sáng */
+}
+
+/* 3. Khi bấm chuột xuống (Active) */
+#payBtn:active {
+  transform: translateY(-1px); /* Nút lún xuống tạo cảm giác lực nhấn */
+  box-shadow: 0 5px 10px rgba(212, 175, 55, 0.3);
+  background: #c5a028; /* Màu tối lại một chút khi nhấn */
+}
+
+
+
+/* Bao quanh ô nhập và nút */
+.discount-wrapper {
+    display: flex;
+    align-items: center;
+    background: #2A2A2A; /* Màu nền xám đậm hơn nền web chút */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px; /* Bo tròn mạnh như viên thuốc */
+    padding: 6px 8px 6px 16px; /* Căn chỉnh khoảng cách */
+    margin-bottom: 24px;
+    transition: border-color 0.3s;
+}
+
+.discount-wrapper:focus-within {
+    border-color: #D4AF37; /* Viền sáng lên khi bấm vào nhập */
+}
+
+/* Icon cái thẻ */
+.discount-wrapper svg {
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+/* Ô input */
+.discount-wrapper input {
+    background: transparent !important; /* Bỏ màu nền mặc định */
+    border: none !important; /* Bỏ viền mặc định */
+    flex: 1; /* Tự giãn hết khoảng trống */
+    color: #EAEAEA;
+    padding: 8px 0;
+    font-size: 15px;
+}
+
+.discount-wrapper input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Nút Áp dụng (Nằm bên trong) */
+#applyBtn {
+    background: #444; /* Màu xám mặc định */
+    color: #aaa;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    width: auto; /* Ghi đè css button cũ */
+    margin-top: 0;
+    transition: 0.3s;
+}
+
+/* Khi nút kích hoạt (Có thể bấm) */
+#applyBtn.active {
+    background: #D4AF37; /* Màu vàng */
+    color: #121212; /* Chữ đen */
+}
+
+#applyBtn:hover.active {
+    background: #f0c445;
+}
+
+
+/* Khung chứa thông tin QR */
+.qr-info-box {
+    margin-top: 20px;
+    background: #1C1C1C;
+    border: 1px dashed #D4AF37; /* Viền nét đứt màu vàng */
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 0.5s ease; /* Hiệu ứng hiện ra từ từ */
+}
+
+/* Tiêu đề nhỏ */
+.qr-title {
+    color: #A8A8A8;
+    font-size: 14px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Ảnh QR */
+.qr-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    border: 2px solid #fff; /* Viền trắng quanh ảnh QR cho dễ quét */
+    margin-bottom: 15px;
+}
+
+/* Thông tin tài khoản */
+.bank-details p {
+    margin: 5px 0;
+    color: #EAEAEA;
+    font-size: 15px;
+}
+
+.bank-details strong {
+    color: #D4AF37; /* Màu vàng cho số tài khoản nổi bật */
+}
+
+.bank-details .note {
+    margin-top: 10px;
+    font-style: italic;
+    color: #888;
+    font-size: 13px;
+}
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+
+  padding: 8px 14px;
+  border-radius: 999px;
+
+  background: rgba(0, 0, 0, 0.6);
+  color: #EEAE18;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  transition: all 0.25s ease;
+}
+
+.back-btn:hover {
+  background: rgba(238, 174, 24, 0.15);
+  color: #fff;
+  transform: translateX(-4px);
+}
+
+/* --- OVERLAY: Thêm hiệu ứng làm mờ hậu cảnh --- */
+.bill-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65); /* Đậm hơn xíu để tăng tương phản */
+    backdrop-filter: blur(5px);       /* QUAN TRỌNG: Làm mờ web phía sau */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    /* Thêm transition cho mượt nếu bạn dùng opacity để ẩn hiện */
+    transition: opacity 0.3s ease; 
+}
+
+/* --- POPUP: Thêm viền phát sáng và bóng đổ --- */
+.bill-popup {
+    background: #111;
+    color: #f5f5f5;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 16px; /* Bo góc tròn hơn chút */
+    padding: 25px;       /* Thoáng hơn */
+    
+    /* Hiệu ứng nổi khối & viền vàng mờ sang trọng */
+    border: 1px solid rgba(212, 175, 55, 0.2); 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5), 
+                0 0 15px rgba(212, 175, 55, 0.1); 
+
+    animation: popupFadeIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- TRANG TRÍ HEADER --- */
+.bill-popup h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #D4AF37;
+    font-family: 'Segoe UI', serif; /* Font có chân nhìn sang hơn cho Bill */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3); /* Chữ phát sáng nhẹ */
+}
+
+/* --- NỘI DUNG --- */
+.bill-content p {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0; /* Giãn dòng ra cho dễ đọc */
+    font-size: 15px;
+    color: #ddd;    /* Màu chữ dịu hơn trắng tinh */
+    border-bottom: 1px solid rgba(255,255,255,0.05); /* Kẻ mờ dưới mỗi dòng */
+    padding-bottom: 4px;
+}
+
+.bill-content p:last-child {
+    border-bottom: none;
+    font-size: 18px; /* Tổng tiền to hơn */
+    font-weight: bold;
+    color: #fff;
+    margin-top: 15px;
+}
+
+/* --- ĐƯỜNG KẺ --- */
+.bill-content hr {
+    border: none;
+    border-top: 2px dashed #444; /* Dày hơn xíu */
+    margin: 20px 0;
+    opacity: 0.7;
+}
+
+/* --- BUTTONS --- */
+.bill-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.bill-actions button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.2s ease; /* Mượt mà khi hover */
+}
+
+/* Nút phụ (Hủy/Đóng) */
+.bill-actions button:not(.primary) {
+    background: #D4AF37;
+    color: #000000;
+    border: 1px solid #333;
+}
+
+.bill-actions button:not(.primary):hover {
+    background: #333;
+    color: #fff;
+}
+
+/* Nút chính (Thanh toán) */
+.bill-actions .primary {
+    /* Gradient giúp nút nhìn nổi khối, không bị bệt */
+    background: linear-gradient(135deg, #D4AF37, #bfa030); 
+    color: #000;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.bill-actions .primary:hover {
+    transform: translateY(-2px); /* Nút bay lên nhẹ */
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+    filter: brightness(1.1);
+}
+
+.bill-actions .primary:active {
+    transform: translateY(1px); /* Nhấn xuống khi click */
+}
+
+
+
+/* --- ANIMATION (Hiệu ứng nảy nhẹ) --- */
+@keyframes popupFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(.8); opacity: 0 }
+    to   { transform: scale(1); opacity: 1 }
+}
+/* Hiệu ứng Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

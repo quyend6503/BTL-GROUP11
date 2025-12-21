@@ -1,0 +1,72 @@
+<div class="overlay" id="overlay">
+
+    <div class="menu-popup">
+        <button class="close-btn1" onclick="closePopup()">✕</button>
+
+        <div class="menu-header">Chi Tiết Món Ăn</div>
+
+        <div class="menu-content">
+
+            <!-- LEFT -->
+            <div class="left-col">
+                <div class="dish-name"> Gà luộc 
+                </div>
+                <div class="image-slider">
+                    <button class="arrow left" onclick="prevImage()">❮</button>
+
+                    <img id="dishImage" src="../../Menu-detail/images/galuoc1.jpeg" alt="Món ăn">
+
+                    <button class="arrow right" onclick="nextImage()">❯</button>
+                </div>
+
+
+                <div class="dish-desc">
+Gà luộc chấm muối là món ăn dân dã nhưng luôn gây thương nhớ với thịt gà vàng ươm, mềm ngọt và giữ trọn hương vị tự nhiên. Khi chấm cùng muối tiêu chanh, vị mặn, cay và chút chua nhẹ làm bật lên độ ngọt của thịt. Món ăn đơn giản nhưng lại cực kỳ hài hòa, thanh đạm và rất dễ ăn trong mọi bữa cơm.
+                </div>
+            </div>
+            <!-- RIGHT -->
+            <div class="menu-info">
+
+                <label>Lựa chọn thêm:</label>
+                <div>
+                    <input type="radio" name="option" value="0"data-name="Không thêm" checked> Không thêm <br>
+                    <input type="radio" name="option" value="180000"data-name="Nguyên con (+180k)"> Nguyên con (+180k) <br>
+                </div>
+
+                <label>Ghi chú:</label>
+                <textarea id="noteInput" placeholder="Thêm yêu cầu..."></textarea>
+
+                <label>Thành tiền:
+                    <span id="totalPrice" style="color:white;">170.000đ</span>
+                </label>
+
+                <div class="menu-actions">
+                    <button class="btn-add1" onclick="addToCart(
+        'Gà luộc',
+        currentTotalPrice,
+        currentOptionName,
+        document.getElementById('noteInput')?.value || '',
+        '../../img/menu-detail/galuoc1.jpeg'
+    )">Thêm vào giỏ</button>
+ 
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="dialogue-popup" id="dialoguePopup">
+        <img src="../../img/menu-detail/tusena.jpg" class="dialogue-avatar">
+        <div class="dialogue-name">Staff Hiếu</div>
+        <div class="dialogue-text" id="dialogueText"></div>
+        <div class="dialogue-choices" id="dialogueChoices"></div>
+    </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+
+</body>
+
+</html>

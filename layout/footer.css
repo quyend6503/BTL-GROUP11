@@ -1,0 +1,158 @@
+/* =========================================
+   RESET & GLOBAL
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =========================================
+   FOOTER STYLE
+========================================= */
+footer {
+    padding: 40px 30px 20px; /* Tăng padding trên/dưới cho thoáng */
+    background-color: #000;
+    width: 100%;
+    color: white;
+}
+
+.footer-container {
+    display: grid;
+    /* Desktop mặc định 4 cột đều nhau */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+    margin-top: 10px;
+    max-width: 1200px; /* Giới hạn chiều rộng để không bị loãng trên màn hình to */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- TEXT & TITLES --- */
+.footer-title {
+    color: #efb022;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Chữ in hoa cho tiêu đề đẹp hơn */
+    letter-spacing: 1px;
+}
+
+.footer-container p {
+    margin-bottom: 15px;
+    line-height: 1.8; /* Giãn dòng vừa phải dễ đọc */
+    font-size: 16px;  /* Size chữ chuẩn web (20px hơi to) */
+    color: #e0e0e0;   /* Màu trắng hơi xám nhẹ cho dịu mắt */
+}
+
+/* --- LOGO --- */
+.footer-logo img {
+    display: block;
+    height: auto;
+    width: 100%;
+    max-width: 250px; /* Giới hạn kích thước logo */
+    object-fit: contain;
+}
+
+/* Class .logo cũ của bạn, thêm max-width để không vỡ mobile */
+.logo {
+    width: 330px;
+    max-width: 100%; 
+}
+
+
+/* --- SOCIAL ICONS --- */
+.footer-social {
+    margin-top: 15px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà */
+}
+
+.footer-social a:hover {
+    color: #efb022;
+    transform: translateY(-5px); /* Bay lên nhẹ khi hover */
+    text-shadow: 0 0 15px rgba(239, 176, 34, 0.6);
+}
+.logo a {
+    font-size: 17px;
+    color: #efb022;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà */
+    margin-left: 100px;
+}
+.logo a:hover {
+    color: #e6a409;
+    transform: translateY(-5px); 
+    text-shadow: 0 0 15px rgba(239, 176, 34, 0.6);
+}
+/* --- DECORATION LINE --- */
+.footer-top-line {
+    height: 2px; /* Đậm hơn xíu cho rõ */
+    width: 60px; /* Ngắn lại cho tinh tế */
+    background: #efb022;
+    margin: 0 auto 30px auto;
+    border-radius: 2px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1); /* Đường kẻ mờ ngăn cách */
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* =========================================
+   RESPONSIVE (Đã sửa lỗi và tối ưu)
+========================================= */
+
+/* Tablet (Màn hình trung bình ~ 1024px) */
+@media (max-width: 1024px) {
+    .footer-container {
+        /* Chuyển thành 2 cột */
+        grid-template-columns: repeat(2, 1fr); 
+        padding: 0 20px;
+    }
+}
+
+/* Mobile (Màn hình nhỏ ~ 768px trở xuống) */
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 15px;
+    }
+
+    .footer-container {
+        /* Chuyển thành 1 cột */
+        grid-template-columns: 1fr; 
+        text-align: center; /* Căn giữa nội dung */
+        gap: 40px;
+    }
+
+    .footer-logo img, 
+    .logo {
+        margin: 0 auto; /* Căn giữa logo */
+    }
+
+    .footer-social a {
+        margin: 0 10px; /* Căn đều icon social */
+    }
+
+    .footer-title {
+        font-size: 20px;
+    }
+    
+    .footer-container p {
+        font-size: 15px;
+    }
+}
