@@ -62,7 +62,7 @@ function submitBooking() {
 
     // CHƯA CHỌN BÀN
     if (table === "Chưa chọn") {
-        alert("❌ Bạn chưa chọn bàn!");
+        alert("❌ Vui lòng bấm vào hình ảnh để chọn bàn !!!");
         return;
     }
 
